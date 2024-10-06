@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    table{
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;    /*0 top/bottm   auto left/right */
+        /* margin-left:auto; margin-right:auto; */
+        
+    }
+    table, th, td{
+        border: solid 1px black;
+        border-collapse: collapse;
+    }
+    
+</style>
+</head>
+<body>
+ <!-- 행 병합, 열 병합 colspan-->
+ <!-- 셀 가로 정렬, 세로 정렬 -->
+    <table>
+        <tr>
+            <td align="right" valign ="top">1</td>
+            <td style="text-align: right; vertical-align: top;">2</td>
+            <td>3</td>
+            <td rowspan="3">4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td colspan="3">6-8</td>
+            
+            
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td colspan="5">21-25</td>
+            <!-- <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td> -->
+        </tr>
+    

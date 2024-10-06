@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+ 
+ div#demo{
+   border: 1px solid gray;
+   height: 100px;
+   
+   overflow: auto;
+ }
+ 
+ .item{
+    color:red;
+    background-color: yellow;
+ }
+ 
+ .search{
+    color:yellow;
+    background-color: blue;
+    font-weight: bold;
+ }
+</style>
+</head>
+<body onload="init();" onunload="">
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">kenik HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+ 
+  <xmp class="code">                       
+  </xmp>
+  <div>
+  
+  <label for="name">이름 입력 : </label>
+  <!-- <input type="text" id="name" name="name" autofocus><br> -->
+  <input type="text" id="name" name="name"><br>
+  <button>추가</button>
+  <button>모두 삭제</button>
+  <button>검색</button>
+  <button>수정</button>
+  <button>삭제</button>
+  <div id="demo"></div>
+  </div>
+  
+  <script>
+    const txtName = $("#name");
+    const btnAdd = $("button").first();
+    const btnAllDel = $("button").eq(2);
+    const btnSearch = $("button").eq(3); // 검색 버튼
+    const demo = $("#demo");
+    
+    
+    btnAllDel.onclick = function (){
+       // alert("test")
+       demo.innerHTML = "";
+    }
+    
+    txtName.on("keydown", function(){
+      if( event.keyCode == 13 ){
+          demoAdd();
+        } 
+    })
+
+    btnAdd.on("click", function(){
+      demoAdd();
+    })
+
+    function demoAdd(){
+       let name = txtName.val();
+
+       $("#demo .item")
+         .last()
+            .css("background-color", "white");
+      
+      demo.append(`<div class="item">${name}</div>`)
+      .scrollTop(demo.scrollHeight);
+
+      txtName.select;
+
+      $("#demo").scrollTop($("#demo")[0].scrollHeight);
+
+      // demo.scrollTop = demo.scrollHeight;
+
+    }
+  
+    function init(){
+       txtName.focus();
+    }
+  </script> 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  div{
+    border: 1px solid black;
+    background: lightblue;
+    
+    /*
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    */
+    /* padding: 50px 30px 50px 80px; */
+    /* padding: 50px 50px 50px 50px; */
+    /* padding: 50px; */
+    
+    /* padding: 50px 80px;   T/B 50px   L/R 80px */
+    /* padding: 50px top   80pxL/R  30px bottom; */ 
+  }
+  
+  .demo{
+    width: 200px;
+  }
+  
+  /*
+  div.demo.second{   
+    color:white;
+  }
+  */
+  
+  /* css selector
+  :nth-child
+  :의사클래스 */
+  /*
+  div:nth-child(2){
+    color:red;
+  }
+  */
+  
+  /* :nth-of-type(3) */
+  /*
+  div:nth-of-type(3){
+    color:blue;
+  }
+  */
+  
+  /* :nth-child(3) 과 :nth-of-type(3) 차이점 */
+  /*
+  div.demo:nth-of-type(2){
+     color:aqua;
+  }
+  */
+  
+  /* div:last-of-type{ */
+  div:last-child{
+     color:green;
+     border:10px solid red;
+     padding: 25px;
+     
+     box-sizing: border-box;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+</style>
+</head>
+<body>
+<!-- 
+    [ padding ]
+    - 테두리(border) 안쪽 여백
+    - 테두리(border)  ↔  내용물(content)
+                     간격
+    - padding-top/right/bottom/left
+    - px, pt, cm, %, inherit 등등 ( 음수 X )                 
+ -->
+ 
+ <!-- div>lorem -->
+ <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis veniam voluptas distinctio itaque vel deserunt nemo rerum sequi ea accusantium voluptate aspernatur delectus enim eius deleniti. Animi atque sit iusto.</div>
+ 
+ <div class="demo">
+  Lorem ipsum dolor sit amet.
+ </div>
+
+ <div class="demo second">
+  Lorem ipsum dolor sit amet.
+ </div>
+
+ <p>XXX</p>
+ 
+</body>
+</html>

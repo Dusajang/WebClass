@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .imgbox{
+    width: 120px;
+    border: 1px solid gray;
+    padding: 6px;
+    margin: 4px;
+    text-align: center;
+    
+    float: left;
+  }
+  
+  .imgbox img{
+    width: 100%;
+  }
+  
+</style>
+</head>
+<body>
+
+<h3>display, visibility 속성 차이점. + jquery </h3>
+
+<!-- #imgbox$.imgbox*3>{Box$}+img[src="../images/??.jpg"]+button -->
+
+<div id="imgbox1" class="imgbox" >
+  Box1
+  <img src="../images/img_5terre.jpg" alt="" />
+  <button>Remove</button>
+</div>
+<div id="imgbox2" class="imgbox">
+  Box2
+  <img src="../images/img_lights.jpg" alt="" />
+  <button>Hide</button>
+</div>
+<div id="imgbox3" class="imgbox">
+  Box3
+  <img src="../images/img_forest.jpg" alt="" />
+  <button>ResetAll</button>
+</div>
+
+<script>
+    
+  // remove
+  $("#imgbox1 > button").on("click", function (){
+	  // alert("1");
+	  // css    style="display:none"
+	  // jquery       css() 
+	  // $("#imgbox1").css("display", "none");		  
+	  $("#imgbox1").hide();
+  });
+
+  // hide
+  $("#imgbox2 > button").on("click", function (){
+	  // alert("2");
+	  $("#imgbox2").css("visibility", "hidden");
+  });
+  
+  // resetAll
+  $("#imgbox3 > button").on("click", function (){
+	  // alert("3");
+	  //$("#imgbox1").css("display", "block");	
+	  $("#imgbox1").show();
+	  $("#imgbox2").css("visibility", "visible");
+  }); 
+  
+  /* 
+  
+  // 이벤트 등록 2
+  btnHide.onclick = function (){
+	  // css  style="visibility:hidden"
+	  // alert( this ); HTMLButtonElement
+	  div2 = this.parentElement
+	  div2.style.visibility="hidden";
+  }
+  
+  //이벤트 등록 3
+  btnResetAll.addEventListener("click", function (){
+	  div1.style.display="block";
+	  div2.style.visibility="visible";
+  });
+  */
+</script>  
+</body>
+</html>
+
+
+

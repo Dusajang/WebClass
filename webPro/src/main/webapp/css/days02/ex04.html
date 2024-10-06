@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body{
+     color:blue;
+     background: lightblue;
+  }
+  
+  h3{
+     color: white;
+     background: black;
+     
+     /* 텍스트 가로 가운데 정렬 */
+     text-align: center;
+  }
+  
+  div{
+     color:red;
+     
+     /* 텍스트 방향 */
+     direction: rtl;
+  }
+  
+  p#p1{
+    border: 1px solid black;
+    padding: 5px;
+    width:250px;
+    height: 100px;
+    
+    /* p 컨테이너 안의 내용물이 넘쳤다 overflow */
+    overflow:  hidden;
+    
+    /* 텍스트의 한 행을 끝을 맞춰서 정렬 */
+    text-align: justify;
+  }
+  
+  /* 텍스트 이미지에서 수직 정렬 - vertical-algin
+     요소의 수직 정렬을 설정한다.  
+  */
+  img.a{ vertical-align: baseline; }
+  img.b{ vertical-align: text-top; }
+  img.c{ vertical-align: text-bottom; }
+  img.d{ vertical-align: sub; }
+  img.e{ vertical-align: super; }
+  
+</style>
+</head>
+<body>
+
+<h3>CSS 텍스트 서식 지정</h3>
+
+<!--
+     [CSS 텍스트 서식 지정]
+     1. 색상 : 표준 색상, #16진수, rgb()
+     2. 정렬 
+        text-align
+ -->
+
+<div>Lorem ipsum dolor sit amet.</div>
+
+<p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium corporis fugiat ullam! Quis cum aperiam quod rem! Commodi esse ab vel expedita porro dolorem quia placeat beatae autem rerum tempora.</p>
+
+<p>Lorem <img src="../images/sqpurple.gif" class="a" style="width:9px;height:9px" alt="" />ipsum dolor sit amet.</p>
+<p>Quam explicabo <img src="../images/sqpurple.gif" class="b" style="width:9px;height:9px" alt="" />provident eum vel!</p>
+<p>Delectus quasi <img src="../images/sqpurple.gif" class="c" style="width:9px;height:9px" alt="" />sed dolorem cumque.</p>
+<p>Eaque at <img src="../images/sqpurple.gif" class="d" style="width:9px;height:9px" alt="" />magnam ratione totam.</p>
+<p>Aliquam quis <img src="../images/sqpurple.gif"
+ class="e" style="width:9px;height:9px" alt="" />animi facilis mollitia.</p>
+
+</body>
+</html>

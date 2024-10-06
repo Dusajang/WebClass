@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+
+  <div style="display: flex;justify-content: space-around;align-items: baseline;">
+    <input type="text" autofocus="autofocus">
+    <select name="operator" id="operator">
+      <option>선택.</option>
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+      <option value="**">**</option>
+    </select> 
+    <input type="text">
+    =
+    <input type="text" disabled="disabled">
+  </div>
+ 
+<script>
+let txt1 = document.querySelector("input[type=text]:first-of-type");
+let txt2 = document.querySelector("input[type=text]:nth-of-type(2)");
+let txt3 = document.querySelector("input[type=text]:last-of-type");
+let opCmb = document.querySelector("#operator");
+
+let selOperator = document.querySelector("#operator");
+    
+    txt1.onkeydown = function (){
+       if(  ! (event.keyCode >= 48 && event.keyCode <=57 
+             || event.keyCode == 8
+             || event.keyCode == 13
+             || event.keyCode == 229 ) ){
+          alert("숫자만 입력하세요...");
+          event.returnValue = false;
+       }
+       
+       if( event.keyCode == 13 ) 
+          txt2.focus();
+    }
+    
+    txt2.onkeydown = function (){
+       if(  ! (event.keyCode >= 48 && event.keyCode <=57 
+             || event.keyCode == 8
+             || event.keyCode == 13
+             || event.keyCode == 229 ) ){
+          alert("숫자만 입력하세요...");
+          event.returnValue = false;
+       }
+       
+       if (event.keyCode == 13) {
+            this.previousElementSibling.focus();
+       }
+           
+    }
+
+    opCmb.onchange = function (){
+      let result;
+      switch (this.value) {
+        case "+":
+        result = parseInt(txt1.value) + Number(txt2.value);
+          break;
+        case "-":
+        result = parseInt(txt1.value) - Number(txt2.value);
+          break;
+        case "*":
+        result = parseInt(txt1.value) * Number(txt2.value);
+          break;
+        case "/":
+        result = parseInt(txt1.value) / Number(txt2.value);
+          break;
+        case "%":
+        result = parseInt(txt1.value) % Number(txt2.value);
+          break;
+        case "**":
+        result = parseInt(txt1.value) ** Number(txt2.value);
+          break;
+      
+        default:
+          break;
+      }
+          txt3.value = result;
+          txt1.select();
+    }
+</script>
+</div> 
+</body>
+</html>

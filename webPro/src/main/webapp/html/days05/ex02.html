@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/SiSt.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* 
+    class="team"
+      ㄴ 클래스명은 대소문자를 구분한다. 
+    id=""
+      ㄴ 아이디명도 대소문자를 구분한다. 
+      ㄴ 중간에 공백을 사용할 수 없다.
+      ㄴ 숫자 시작 X   
+    */
+	.team1 {
+		background-color: yellow;
+	}
+	
+	.team2 {
+		background-color: green;
+	}
+	
+	li.teamleader {
+		color: red;
+	}
+</style>
+</head>
+<body>
+	<!-- .team$*2>ul>li*5 -->
+	<div class="team1">
+		<ul>
+			<li class="teamleader">김준석</li>
+			<li>전재윤</li>
+			<li>박준용</li>
+			<li>송세호</li>
+			<li>이시훈</li>
+		</ul>
+	</div>
+	<div class="team2">
+		<ul>
+			<li class="teamleader">원충희</li>
+			<li>김선우</li>
+			<li>김재민</li>
+			<li>최사랑</li>
+			<li>김인경</li>
+		</ul>
+	</div>
+	
+	<script>
+	  //nodeList document.getElementById("아이디명")
+	  var team2List = document.querySelectorAll(".team2 ul li");
+	  //alert( team2List.length );
+	  for (var i = 0; i < team2List.length; i++) {
+		console.log( team2List[i].innerText );
+		// li 요소에  click 이벤트 처리.
+		team2List[i].addEventListener("click", function (){
+			// console.log( this  +"/" + team2List[i] );
+			// this.remove();
+			this.nextElementSibling.remove();
+		});
+	  }
+	</script>
+</body>
+</html>
+

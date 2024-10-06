@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    div{
+        border: 3px solid #4caf50;
+        padding: 5px;
+    }
+
+    div>img.img1{
+        float: left;
+    }
+
+    /* 첫 번째 방법
+    .clearfix{
+        overflow: auto;
+    } */
+
+     /*대부분의 브라우저 처리하는 방법*/
+     /* : 의사클래스
+     :: 의사 요소 */
+     .clearfix::after{
+        content: "";
+        clear: both;
+        display: table;
+     }
+</style>
+</head>
+<body>
+<!-- 
+    [clearfix 해크] 
+    부동 요소가 포함하고 있는 컨테이너요소보다 크면
+    컨테이너 외부에 오버플로우가 발생을 한다.
+    이런 문제를 해결하는 것...   
+-->
+<div class="clearfix">
+    <img class="img1" src="../images/pineapple.jpg" alt=""
+    width=170 height="170"/>
+     Aspernatur eos magni nisi explicabo eaque voluptatem optio nemo aliquid odit illo pariatur voluptate molestias dicta earum omnis quam voluptates quia facilis.
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+</head>
+<body>
+
+<h3>html 이미지</h3>
+
+<!--  
+	img 태그
+	  ㄴ 웹 페이지의 디자인과 모양을 향상
+	  ㄴ 인라인 모드
+	  ㄴ alt 속성 : 이미지를 대체할 텍스트를 지정하는 속성
+	     , src 속성 : 이미지 경로(URL)
+	     은 필수
+	     
+	     너비 + 높이
+	     반드시 너비+높이 속성은 설정을 하자. 
+	     이유? 너비, 높이가 지정되지 않으면 
+	     이미지를 로딩하는 동안 웹페이지가 깜빡임이 발생하기 때문
+	  
+	html 폴더
+	  ㄴ images 폴더 생성
+	webapp
+	  ㄴ images 폴더 생성
+	    ㄴSiSt.ico
+	    
+	html에서 단위를 생략하면 px이다
+	css에서는 단위 생략 X
+-->
+
+<img alt="이탈리안 튤립" src="http://localhost/webPro/images/pic_trulli.jpg" width="500" height="333">
+
+<img alt="이탈리안 튤립" src="./../../images/pic_trulli.jpg" style="width:250px">
+
+<hr>
+
+<!-- 
+	모든 브라우저(크롬, 엣지, 파이어폭스, 사파리, 오페라 등등) 에서
+	일반적으로 지원하는 이미지 파일 형식
+	:gif, ico, jpeg, png, svg, apng
+	
+	(주의) 너무 큰 이미지를 로그하는 데는 시간이 걸리고,
+	웹 페이지의 속도가 느려질 수 있다.(신중하게 고려)
+	
+	이미지가 페이지에 삽입된 것이 아님
+	이미지 URL을 연결하는 것
+ -->
+ 
+ <a herf="./../../images/pic_trulli.jpg" target="_blank">
+ <img alt="이탈리안 튤립" src="./../../images/pic_trulli.jpg" style="width:250px"; height="167px">
+ </a>
+</body>
+</html>

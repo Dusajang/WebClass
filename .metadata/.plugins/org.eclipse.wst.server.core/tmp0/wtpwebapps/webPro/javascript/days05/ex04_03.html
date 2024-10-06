@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    String toUpperCase()
+    String toLowerCase()
+
+    String concat()
+
+    String trim()
+    String trimStart()
+    String trimEnd()
+
+    String padStart()
+    String padEnd()
+
+    String repeat()   "-".repeat(10)  ----------
+
+    String replace()
+    String replaceAll()
+
+                               
+  </xmp>
+</div> 
+
+<script>
+  /*
+  let a = "Hello World";
+  // let b = a.toUpperCase();   //HELLO WORLD
+  // let b = a.toLowerCase();     //hello world
+  // alert(b);
+  */
+
+  // let a = "hello";
+  // let b = "world";
+  // c = "hello world";
+  // let c = `${a}+${b}`;
+  // let c = a + "" + b;   //문자열 연결 연산자
+  // let c = a.concat(" ").concat(b);
+  // alert(c);
+  /*
+  String trim()
+  String trimStart()
+  String trimEnd()
+  */
+
+  // let t = "   hello world    ";
+  // t = t.trim();    // 앞뒤공백 제거
+  // t= t.trimStart();    //[hello world    ]   앞 공백 제거
+  // t = t.trimEnd();    //[   hello world]   뒤 공백 제거
+  //  alert(`[${t}]`);   //[hello world]
+
+  /*
+  String padStart()
+  String padEnd()
+  */
+ let no = "15"
+
+//  alert(no.padStart(4, "0"));   //0015
+//  alert(no.padEnd(4, "0"));   //1500
+
+
+ // "15"    ->    "0015"
+ /*
+let no = "15"
+let x = "";
+for (let i = 0; i < 4-no.length; i++) {
+  x+="0" 
+}
+x += no;
+alert(x);
+*/
+/*
+let no = "15"
+no = "0".repeat(4-no.length).concat(no);
+alert(no);
+*/
+/*
+String replace()
+String replaceAll()
+*/
+
+// let msg = "홍길동님 안녕하세요. 홍길동입니다."
+// alert(msg.replace("홍길동","XXX"));  // XXX님 안녕하세요. 홍길동입니다.
+// alert(msg.replaceAll("홍길동","XXX"));  //XXX님 안녕하세요. XXX입니다.
+
+let msg = "홍길동님 안녕하세요. 홍길동입니다."
+// alert(msg.replace(/홍길동/g,"XXX"));  //XXX님 안녕하세요. XXX입니다.
+
+
+</script>
+</body>
+</html>

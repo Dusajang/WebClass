@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+       라디오 버튼을 선택한 후 실행 버튼을 클릭하면
+       demo에 선택한 라디오 버튼의 value 속성값을 출력...                  
+  </xmp>
+
+  <input type="radio" name="group" value="aaa">에이<br>
+  <input type="radio" name="group" value="bbb">비<br>
+  <input type="radio" name="group" value="ccc">씨<br>
+  <input type="radio" name="group" value="ddd">디<br>
+  <input type="radio" name="group" value="eee">이<br>
+  <br>
+  <button>실행</button>
+  <p id="demo"></p>
+
+
+<!-- <script>
+  document.querySelector("button").onclick = function() {
+    //document.querySelectorAll("body>div>input[name=group]")
+    const radioList = document.getElementsByName("group");
+
+    let flag = true;
+    for (let i = 0; i < radioList.length; i++) {
+      if (radioList[i].checked) {
+        flag = false;
+        // value 속성을 demo에 출력
+        //document.querySelector("#demo").innerText = radioList[i].value;
+        alert(radioList[i].nextSibling.nodeValue);
+        break;
+      }//else if(radioList[i].checked != true){
+      //   alert("선택해주세요")
+      //   break;
+      // }//if
+      
+    }//for
+    if(flag) alert(" 선택해라")
+  }
+</script> -->
+<script>
+
+//3번 풀이
+$("button").on("click",function(){
+    //jq selector    :radio == input[name=group]
+    //jq selector    :checked
+    //jq method      get() 
+   if( $(":radio[name=group]:checked").length ){
+    //$("#demo").text($(":radio[name=group]:checked").val());
+    //$(":radio[name=group]:checked") -> DOM 요소 얻어오는 메서드 get()
+    alert( $(":radio[name=group]:checked").get(0).nextSibling.nodeValue );
+   }else{ // js null / ""/ 0 == false
+    alert("XXX")
+   }
+  })
+
+
+/*
+  //2번 풀이
+  $("button").on("click",function(){
+    //jq selector    :radio == input[name=group]
+    $(":radio[name=group]").each(function(index, element){
+        if (element.checked) {
+          //$("#demo").text(element.value);
+          $("#demo").text(element.nextSibling.nodeValue);
+        }
+    })
+
+  })
+*/
+
+/* 1번 풀이
+  $("button").on("click",function(){
+    const radioList = $("body>div>input[name=group]");
+    // alert(radioList.length);
+
+    for (let i = 0; i < radioList.length; i++) {
+      // console.log( $(radioList[i]).prop("checked") );
+      if ($(radioList[i]).prop("checked")) {
+        // $("#demo").text($(radioList[i]).val());
+        $("#demo").text(radioList[i].nextSibling.nodeValue);
+        break;
+      }
+    }//for
+
+  })
+  */
+</script>
+</div> 
+</body>
+</html>

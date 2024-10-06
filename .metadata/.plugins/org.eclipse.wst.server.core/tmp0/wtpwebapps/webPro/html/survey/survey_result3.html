@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/SiSt.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+.container {
+	width: 80%;
+	margin: 0 auto;
+	border: solid 1px #808080;
+}
+
+.surv_detail {
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+.buttons {
+	text-align: right;
+}
+
+.surv_result {
+	padding: 10px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+th, td {
+	padding: 8px;
+	text-align: left;
+}
+
+.progress-bar {
+	position: relative;
+	margin: 5px 0;
+	height: 20px;
+	width: 400px;
+	/* background-color: #f1f1f1; */
+	border-radius: 5px;
+}
+
+.progress {
+	background-color: #4CAF50;
+	height: 100%;
+	border-radius: 5px;
+	position: relative;
+	white-space: nowrap; /* 줄바꿈을 방지 */
+}
+
+.progress-value {
+	position: absolute;
+	left: calc(100% + 10px); /* 막대 끝에서 10px 떨어진 위치에 값 표시 */
+	top: 50%;
+	transform: translateY(-50%); /* 값이 세로 중앙에 위치하도록 조정 */
+	color: black;
+}
+
+.item {
+	text-align: right;
+	width: 30%;
+}
+
+.result-div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: -10px;
+}
+
+.total-participants {
+	font-weight: bold;
+}
+
+.buttons {
+	text-align: right;
+}
+
+.buttons button {
+	margin-left: 10px;
+}
+</style>
+</head>
+<body>
+
+	<div class="container">
+
+		<h1>설문 보기</h1>
+
+		<div class="surv_detail">
+			<table>
+				<tr>
+					<th>질문</th>
+					<td colspan="3">가장 좋아하는 여자 연예인은?</td>
+				</tr>
+				<tr>
+					<th>작성자</th>
+					<td>관리자</td>
+					<th>작성일</th>
+					<td>2006-03-05 오전 1:30:45</td>
+				</tr>
+				<tr>
+					<th>시작일</th>
+					<td>2006-03-01</td>
+					<th>종료일</th>
+					<td>2006-05-01</td>
+				</tr>
+				<tr>
+					<th>상태</th>
+					<td>진행중</td>
+					<th>항목수</th>
+					<td>5</td>
+				</tr>
+				<tr>
+					<th>항목</th>
+					<td colspan="3"><input type="radio" name="vote" value="배슬기">
+						배슬기<br> <input type="radio" name="vote" value="김옥빈">
+						김옥빈<br> <input type="radio" name="vote" value="아이비">
+						아이비 꺄~~~~~~ 사. 랑. 해. 요. 아. 이. 비.<br> <input type="radio"
+						name="vote" value="한효주"> 한효주<br> <input type="radio"
+						name="vote" value="김선아"> 김선아<br></td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="surv_result">
+			<div class="result-div">
+				<p class="total-participants">총 참여자 수: 7명</p>
+				<div class="buttons">
+					<button>투표하기</button>
+					<button>목록</button>
+				</div>
+			</div>
+			<table>
+				<tr>
+					<td class="item">배슬기</td>
+					<td>
+						<div class="progress-bar">
+							<div class="progress" data-value="2" data-percentage="28.57"></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="item">김옥빈</td>
+					<td>
+						<div class="progress-bar">
+							<div class="progress" data-value="0" data-percentage="0"></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="item">아이비 꺄~~~~~~ 사. 랑. 해. 요. 아. 이. 비.</td>
+					<td>
+						<div class="progress-bar">
+							<div class="progress" data-value="4" data-percentage="57.14"></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="item">한효주</td>
+					<td>
+						<div class="progress-bar">
+							<div class="progress" data-value="1" data-percentage="14.29"></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="item">김선아</td>
+					<td>
+						<div class="progress-bar">
+							<div class="progress" data-value="0" data-percentage="0"></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function() {
+			// 각 progress-bar의 데이터 값과 퍼센티지를 가져와서 동적으로 처리
+			$('.progress').each(function() {
+				var value = $(this).data('value'); // data-value 속성 값
+				var percentage = $(this).data('percentage'); // data-percentage 속성 값
+
+				// 막대 너비 설정
+				$(this).css('width', percentage + '%');
+
+				// 값 표시를 위한 span 생성 후 추가
+				$(this).append('<span class="progress-value">' + value + ' (' + percentage + '%)</span>');
+			});
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">kenik HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+  
+  <p id="demo"></p>
+  
+</div> 
+<script>
+  /*
+  // [var 키워드 ]
+  var age = 50;
+  //document.querySelector("#demo").innerText = age;
+  
+  // age 변수를 재선언 가능
+  // 재선언할지라도... 변수의 값이 손실되지 않고 유지된다.
+  var age;
+  document.querySelector("#demo").innerText = age;
+  */
+</script>
+<script>
+  /*
+  // [let 키워드 ]
+  let age = 50;
+  document.querySelector("#demo").innerText = age;
+ 
+  // 변수 재 선언  X
+  // let age;
+  document.querySelector("#demo").innerText = age;
+  */ 
+</script>
+<script>
+  /*
+  var $name ;  // 변수명   $ _  사용 가능
+  // $("p")    이 때 $라는 기호는 jquery 에서 html 요소를 나타내는 기호 $
+  // $ 기호 대신에 다른 기호를 사용할 수 있도록 변경.
+   */
+</script>
+<script>
+  // [js 호이스팅]
+  // 모든 선언을 현재 범위(함수 안, 현재 script 안)의 
+  // 맨 위로 이동시 키는 js의 기본 기능(동작)
+  
+  age = 30;     // 변수값 할당
+  document.querySelector("#demo").innerText = age; // 출력.
+  
+  
+  
+  
+  
+  
+  
+  var age ;   // 변수 선언
+  // let age; // js 호이스팅 X
+  // let 키워드로 변수를 선언하면 반드시 선언 후에 사용할 것..
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

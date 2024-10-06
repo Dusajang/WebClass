@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+
+ #items-container{
+  height: 200px;
+  overflow: auto;
+  border: 1px solid gray;
+  padding: 3px;
+ }
+</style>
+</head>
+<body onload="init();">
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+      js 동적 요소 생성, 추가, 삭제, 수정
+      
+      생성 : createElement()
+      추가 : appendChild(), insertBefore()
+      삭제 : removeChild()
+      교체 : replaceChild()
+
+            hasChildNodes()
+      설문조사 : 항목수를 선택하면 -> 입력 텍스트박스 생성.
+  </xmp>
+
+  항목수 : 
+  <select name="itemCount" id="itemCount">
+    <option>선택...</option>
+  </select>
+  <br>
+  항목 : 
+  <br>
+  <!-- 항목 1 : <input type="text"><br>
+  항목 2 : <input type="text"><br>
+  항목 3 : <input type="text"><br>
+  항목 4 : <input type="text"><br> -->
+
+<div id="items-container"></div>
+
+<script>
+// 2.
+document.querySelector("#itemCount").onchange = function () {
+  const container = document.querySelector("#items-container");
+
+  let count = this.options[this.selectedIndex].value;
+
+  let htmlString = "";
+  for (let i = 1; i <= count; i++) {
+      htmlString += `항목 ${i} : <input type="text" id="item-${i}" name="item-${i}"><br>`
+  }//for
+  container.innerHTML = htmlString;
+
+}
+
+
+/* 1.
+document.querySelector("#itemCount").onchange = function () {
+        const container = document.querySelector("#items-container");
+        // container.innerHTML = "";
+
+        while (container.firstChild) {
+          // The list is Live so it will re-index each call
+          container.removeChild(container.firstChild);
+        }
+
+        let count = this.options[this.selectedIndex].value;
+
+        for (let i = 1; i <= count; i++) {
+          let itemNo = document.createTextNode(`항목 ${i} : `);
+          // document.body.appendChild(itemNo);
+          container.appendChild(itemNo);
+
+          let item = document.createElement("input");
+          item.setAttribute("type", "text");
+          item.setAttribute("id", `item-${i}`);
+          item.setAttribute("name", `item-${i}`);
+          item.className = "long";
+          // document.body.appendChild(item);
+          container.appendChild(item);
+
+          let br = document.createElement("br");
+          // document.body.appendChild(br);
+          container.appendChild(br);
+        }
+      };
+*/
+
+
+function init() {
+  // 초기화
+  // select > option  15개 추가...
+  const sel = document.querySelector("#itemCount");
+
+  for (let i = 1; i <= 15; i++){
+  // optionObj=new Option([text[,value[,defaultSelected[,selected]]]])
+  const op = new Option(i, i);
+  sel.options[i] = op;
+  }
+
+  /* 1번
+  for (let i = 1; i <= 15; i++) {
+    // <option>text</option>
+    const op = document.createElement("option");
+    op.setAttribute("value" , i);   // value
+    op.innerText = i;               // text
+    
+    sel.appendChild(op);
+  }
+  */
+
+}
+</script>
+</div> 
+</body>
+</html>

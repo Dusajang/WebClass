@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon"
+	href="http://localhost/webPro/images/SiSt.ico">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+table, th, td {
+	border: 1px, solid gray;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+td {
+	text-align: center;
+}
+.sun, .휴일{
+	color: red;
+}
+.today{
+	background-color: gray;
+}
+</style>
+</head>
+<body>
+	<!-- 
+	col, colgroup 태그 설명
+		ㄴ 테이블의 특정 열에 스타일으 지정하기 위한 태그
+		ㄴ width, visibility, background, border 속성만 제한적으로 설정할 수 있다.
+		
+		display="none"                hide()
+		dispaly="inline"              show()
+	
+	col == column
+ -->
+	<table style="width: 100%;">
+		<colgroup>
+			<col span="1" style="width: 100px; color: red;">
+			<col span="5" >
+			<col span="1" style="width: 100px; background-color: blue;">
+		</colgroup>
+		<tr>
+			<th>SUN</th>
+			<th class="sun">MON</th>
+			<th>TUE</th>
+			<th>WED</th>
+			<th>THU</th>
+			<th>FRI</th>
+			<th>SAT</th>
+		</tr>
+		<tr>
+			<td class="sun">1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			<td>7</td>
+		</tr>
+		<tr>
+			<td class="sun">8</td>
+			<td>9</td>
+			<td>10</td>
+			<td><span class="today" title="오늘 날짜">11</span></td>
+			<td>12</td>
+			<td>13</td>
+			<td>14</td>
+		</tr>
+		<tr>
+			<td class="sun">15</td>
+			<td class="휴일">16</td>
+			<td class="휴일">17</td>
+			<td class="휴일">18</td>
+			<td>19</td>
+			<td>20</td>
+			<td>21</td>
+		</tr>
+		<tr>
+			<td class="sun">22</td>
+			<td>23</td>
+			<td>24</td>
+			<td>25</td>
+			<td>26</td>
+			<td>27</td>
+			<td>28</td>
+		</tr>
+	</table>
+</body>
+</html>

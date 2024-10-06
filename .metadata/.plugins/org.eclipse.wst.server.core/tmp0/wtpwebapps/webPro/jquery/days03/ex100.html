@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+
+<script>    /*렌더링 순서 잘 확인하자*/
+  $(document).ready(function(){
+    $("button").first().on("click", function(){
+      alert("button 1")
+    })
+    //
+    // :last 선택자는 css에는 없음, jquery 선택자임
+    //$("button:last")
+    $("button:last").on("click", function(){
+      // alert("button 2")
+      //버튼 2를 클릭할 때 버튼 1의 이벤트를 발생
+      //이벤트 트리거
+      //prev() / next()
+      $(this).prev().click();
+    })
+  });
+
+</script>
+
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+
+  <button>버튼 1</button>
+  <button>버튼 2</button>
+
+  
+</div> 
+</body>
+</html>

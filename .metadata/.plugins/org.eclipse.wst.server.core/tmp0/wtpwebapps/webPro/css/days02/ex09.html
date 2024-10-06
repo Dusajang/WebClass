@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  table{
+    width: 100%;
+    border: 1px solid gray;
+  }
+  th, td{
+    border: 1px solid gray;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  tr:nth-child(even){
+    background: #f2f2f2;
+  }
+  
+  div{
+    /* border: 1px solid red; */
+    /* overflow: hidden; */
+    overflow-x: auto;
+  }
+</style>
+</head>
+<body>
+<!-- 
+   [반응형 테이블]
+   화면이 너무 작아서 전체 내용을 표시할 수 없는 경우
+   가로 스크롤 막대를 표시하는 테이블...
+   
+   - 방법
+     1) table 감싸는 컨테이너 역할을 하는 div 추가
+     2) overflow-x:auto 속성을 설정 
+ -->
+ <!-- div>table>(tr>th*10>lorem1)+(tr>td*10>lorem1)*3 -->
+ <div>
+ 	<table>
+ 	    <caption>반응형 테이블</caption>
+ 		<tr>
+ 			<th>Lorem.</th>
+ 			<th>Totam.</th>
+ 			<th>Aliquid.</th>
+ 			<th>Illo!</th>
+ 			<th>Beatae?</th>
+ 			<th>Illo!</th>
+ 			<th>Eum!</th>
+ 			<th>Soluta!</th>
+ 			<th>Reprehenderit!</th>
+ 			<th>Rem!</th>
+ 		</tr>
+ 		<tr>
+ 			<td>Lorem.</td>
+ 			<td>Autem.</td>
+ 			<td>Ipsam.</td>
+ 			<td>Facilis.</td>
+ 			<td>Laboriosam.</td>
+ 			<td>Assumenda?</td>
+ 			<td>Corporis.</td>
+ 			<td>Quos.</td>
+ 			<td>Tempora.</td>
+ 			<td>Aspernatur!</td>
+ 		</tr>
+ 		<tr>
+ 			<td>Lorem.</td>
+ 			<td>Autem.</td>
+ 			<td>Ipsam.</td>
+ 			<td>Facilis.</td>
+ 			<td>Laboriosam.</td>
+ 			<td>Assumenda?</td>
+ 			<td>Corporis.</td>
+ 			<td>Quos.</td>
+ 			<td>Tempora.</td>
+ 			<td>Aspernatur!</td>
+ 		</tr>
+ 		<tr>
+ 			<td>Lorem.</td>
+ 			<td>Autem.</td>
+ 			<td>Ipsam.</td>
+ 			<td>Facilis.</td>
+ 			<td>Laboriosam.</td>
+ 			<td>Assumenda?</td>
+ 			<td>Corporis.</td>
+ 			<td>Quos.</td>
+ 			<td>Tempora.</td>
+ 			<td>Aspernatur!</td>
+ 		</tr>
+ 	</table>
+ </div>
+</body>
+</html>

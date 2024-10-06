@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<!-- 자동 완성 속성 : autocomplete = on -->
+<form action="ex100_ok.jsp" method="get" autocomplete="on">
+   <!-- readonly="readonly" 읽기 전용 -->
+   <!-- size 속성은 너비  -->
+   <!-- maxlength=20 최대 문자 수-->
+   <!-- min ~ max 속성 -->
+   id : <input type="text" name="id" value="admin" 
+   readonly="readonly" size="30" maxlength="20"><br>
+   
+   <!-- disabled="disabled" 서브밋 될 때 전송되지 않는다. -->
+   email : <input type="text" name="email" value="admin@naver.com" disabled="disabled"><br>
+   
+   <!-- 010-0000-0000 pattern 속성 -->
+   phone : <input type="text" pattern="[0-9]{3}-\d{4}-\d{4}"><br> 
+   
+   kor : <input type="number" min="0" max="100" value="80" step="2"><br>
+   
+   time : <input type="time"><br>
+   url : <input type="url"><br>
+   search : <input type="search"><br>
+   
+</form>
+
+</body>
+</html>
+
+
+<!-- 
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+		<input type="search">
+<input type="submit">
+		<input type="tel">
+<input type="text">
+		<input type="time">
+		<input type="url">
+		<input type="week">
+-->
+
+
+
+
+
+

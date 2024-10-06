@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script>
+ function bookmark() {
+	//console.log("bookmark()...");
+	var url = "http://localhost/webPro/html/days01/ex01.html#webid";
+	location.href = url;
+ }
+
+</script>
+
+</head>
+<body>
+
+<!-- [a 링크] 
+	1. 다른 페이지로 이동
+	2. 북마크(책갈피) 가능
+	3. js 처리 ***
+
+	BOM
+	window.alter()
+-->
+
+<a href='javascript:window.alert("경고창")'>경고창 띄우기</a><br>
+
+<!-- BOM window객체가 최상위 객체, window 생략 가능 -->
+<a href='javascript:alert("경고창")'>경고창 띄우기</a><br>
+
+<a href='javascript:bookmark("")'>경고창 띄우기</a><br>
+
+<a href="mailto:admin@naver.com">관리자 메일 보내기</a><br>
+
+
+</body>
+</html>

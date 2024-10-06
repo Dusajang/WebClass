@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .box{
+        border: 1px solid gray;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<!-- <div class="box">Box - 1</div> -->
+
+
+<script>
+    // [js]  div 요소 동적 생성 + 스타일 지정
+    //DOM method
+    //<div></div>
+    const divElement = document.createElement("div")
+    //<div>Box - 1</div>
+    divElement.innerText = "Box - 1";
+    
+    // 스타일 지정
+    /*
+    divElement.style.border = "1px solid gray";
+    divElement.style.width = "100px";
+    divElement.style.height = "100px";
+    //css text-align  => js   textAlign
+    divElement.style.textAlign = "center";
+    */
+
+    // 스타일 지정 2
+    //<div class="box">Box - 1</div>
+    //jquery class 속성 추가/제거  addClass()/removeClass()
+    // js  class 속성 추가/제거    classList.add("")/className=""
+    divElement.className="box";        
+
+    //<body> 요소의 자식으로 새로 생성한 요소를 추가
+    document.body.appendChild(divElement);
+</script>
+</body>
+</html>

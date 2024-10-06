@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+ 
+ p{
+    height: 200px;
+ }
+</style>
+</head>
+<body onload="init();">
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">kenik HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">                         
+  </xmp>
+  
+   RED : <input id="c_red" type="range" 
+     min="0" max="255" step="1" value="0" /><br>
+   GREEN : <input id="c_green" type="range" 
+     min="0" max="255" step="1" value="0" /><br>
+   BLUE : <input id="c_blue" type="range" 
+     min="0" max="255" step="1" value="0"  /><br>
+    
+   <p>홍길동</p>  
+   
+   <script>
+      /*
+   const   c_red = document.querySelector("#c_red");
+   const   c_green = document.querySelector("#c_green");
+   const   c_blue = document.querySelector("#c_blue");
+   */
+   const c_rgb = $("input[type='range']");
+   const pElem = $("p");
+
+   $("input[type='range']").each(function(index, element){
+      // console.log(`index:${indes}, element:${element}`)
+      element.input = func_p_bgcolor
+   });
+   
+  /*
+  for (let i = 0; i < c_rgb.length; i++) {
+   c_rgb[i].oninput = func_p_bgcolor;
+  }
+   */
+
+   
+   function func_p_bgcolor(){
+      let redVal = c_rgb[0].value;
+      let greenVal = c_rgb[1].value;
+      let blueVal = c_rgb[2].value;
+      
+      pElem.css("backgroundColor", 
+         `RGB(${redVal},${greenVal},${blueVal})`);
+      pElem.text(`RGB(${redVal},${greenVal},${blueVal})`);
+      pElem.css("font-size", "30px");
+   }
+   
+   
+      function init(){
+         func_p_bgcolor();
+      }
+   </script>
+  
+</div> 
+</body>
+</html>

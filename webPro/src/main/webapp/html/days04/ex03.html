@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    html, body{
+        margin: 0;
+        padding: 0;
+    }
+
+    ul{
+        /* border: solid 1px blue; */
+        /* border-color: blue;
+        border-style: solid;
+        border-width: 1px; */
+
+        /* 배경색 */
+        background-color: #333;
+
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        overflow: hidden;
+    }
+    ul#main li{
+        /* 이미지 플로팅(float) */
+        float: left;
+    }
+    ul#main li a{
+        color: white;
+        text-decoration: none;
+       /* border: 1px solid red; */
+        padding: 16px;
+        /* inline모드 -> block 모드 변경 */
+        display: block;
+    }
+
+    ul#main li:nth-child(1){
+        background-color: red;
+    }
+    ul#main li:last-child{
+        float: right;
+    }
+
+    /* 활성화된 메뉴는 class=active */
+    ul#main li a.active{
+        background-color: #04AA6D;
+        color: white;
+    }
+    /* CSS 선택자 */
+    ul#main li a:hover:not(.active){
+        color: orange;
+        background-color: #333;
+    }
+
+</style>
+</head>
+<body>
+<!-- ul#main>li*4>a   -->
+<ul id="main">
+    <li><a href="#">Home</a></li>
+    <li><a href="#" class="active">News</a></li>
+    <li><a href="#">Contect</a></li>
+    <li><a href="#">About</a></li>
+</ul> 
+</body>
+</html>

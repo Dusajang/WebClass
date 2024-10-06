@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style> 
+    /* 전역변수 선언 */
+    :root{
+        --blue: #1e90ff;
+        --white: #fff;
+    }
+
+    body {
+     background-color: var(--blue);
+    }
+    h2{
+      border-bottom: 2px solid  var(--blue);
+    }
+    .container{
+      color:#1e90ff;
+      background-color: var(--white);
+      padding: 15px;
+    }
+    button{
+        /* 지역변수 + 전역변수 blue 재정의 */
+        --blue:#0000ff;
+        --white : #fff
+
+      background-color: var(--white);
+      color: var(--blue);
+      border: 1px solid  var(--blue);
+      padding:5px;
+    }
+  </style>
+</head>
+<body>
+
+    <h1>The Traditional Way</h1>
+
+    <div class="container">
+      <h2>Lorem Ipsum</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit.</p>
+      <p>
+        <button>Yes</button>
+        <button>No</button>
+      </p>
+    
+</body>
+</html>

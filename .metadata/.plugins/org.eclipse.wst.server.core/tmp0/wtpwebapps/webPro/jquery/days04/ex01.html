@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    <option value="">음악</option>
+          <option value="음악">음악</option>
+          value 속성을 설정하지 않으면 
+          test 속성 == value 속성 
+
+          selected = "selected"
+  </xmp>
+  좋아하는 과목을 선택하세요?
+  <br>
+  <select name="subject" id="subject">
+    <option value="">선택하세요.</option>
+    <option value="kor">국어</option>
+    <option value="eng">영어</option>
+    <option value="mat">수학</option>
+    <option value="pe">체육</option>
+  </select>
+  <br>
+  <button>확인</button>
+  <p id="demo"></p>
+</div> 
+
+<script>
+
+  $("#subject").on("change", function(){
+    $("button").click();    // 이벤트 트리거
+  })
+
+$("button").on("click", function (){
+  // alert("test");
+
+  //jquery selector  :    :checked   /  :selected
+  //jquery method  :  find()   /   index()    /    text()
+
+  // alert(  $("#subject").find(":selected").index()  );
+  // alert(  $("#subject").find(":selected").text()  );
+  let oValue =$("#subject").val();
+  /*
+  if ($("#subject").find(":selected").index() == 0) {
+      alert("과목을 선택하세요!!")
+      return;
+    }
+  */
+  if (!oValue) {    // js   ""(빈문자열)  false
+      alert("과목을 선택하세요!!")
+      return;
+    }
+
+  let oText = $("#subject").find(":selected").text();
+
+  $("#demo").html( `선택한 옵션의 value : ${oValue}
+                      <br>
+                      선택한 옵션의 text : ${oText}
+                      `
+            );
+})
+</script>
+
+<!-- <script>
+  document.querySelector("#subject").onchange = function(){
+    //alert("change")
+    selectChange();
+  }
+
+  document.querySelector("button").onclick = function(){
+    
+  }
+
+  function selectChange(){
+    let sel = document.querySelector("#subject");
+    let demo = document.querySelector("#demo");
+    //alert(sel.selectedIndex);
+    if (sel.selectedIndex == 0) {
+      alert("과목을 선택하세요!!")
+      return;
+    }
+    //js options 컬렉션
+    let sOp = sel.options[sel.selectedIndex];
+    // sOp.getAttribute("value");
+    let oValue = sOp.value;
+    //sOp.innerText
+    let oText = sOp.text;
+    demo.innerHTML = `선택한 옵션의 value : ${oValue}
+                      <br>
+                      선택한 옵션의 text : ${oText}
+                      `;
+  }
+</script> -->
+</body>
+</html>

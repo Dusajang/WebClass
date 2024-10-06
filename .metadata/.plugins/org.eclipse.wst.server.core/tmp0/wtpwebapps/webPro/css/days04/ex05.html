@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+    *{
+        box-sizing: border-box;
+    }
+    
+    /* 태그명이 css seletor */
+    /* input{ */
+
+    /*type 속성을 가지고 있는 input 태그*/
+    /* input[type]{ */
+
+    /* [type=submit]{ */
+
+    /* WHERE title = 'flower' */
+    /* [title='flower']{ */
+
+    /* WHERE title LIKE 'flower%' */
+    /* [title^='flower']{ */
+    
+    
+    /* WHERE title LIKE '%flower' */
+    /* [title$='flower']{ */
+    
+    
+    /* WHERE title LIKE '%flower%' */
+    /* [title*='flower']{ */
+
+    /* 단어가 flower.  공백 구분자 O   /  다른 구분자는 X */
+    /* [title~='flower']{ */
+
+    /* flower로 시작하는 단어, 뒤에 다른게 붙어도 괜찮음 ex)flowers, flower- */
+    [title|='flower']{
+        width: 200px;
+        border: 1px solid red;
+        padding: 0;
+    }
+</style>
+</head>
+<body>
+<!-- 
+    css selector (속성을 사용하는 선택자) 
+    1. [속성명]
+
+    2. [속성명 = 속성값]
+    3. [속성명^ = 속성값]
+    4. [속성명$ = 속성값]
+    5. [속성명* = 속성값]
+    6. [속성명~ = 속성값]
+    7. [속성명| = 속성값]
+-->
+
+<a href="#" title="klematis flower">naver</a><br>
+<a href="#" title="flower">daum</a><br>
+<a href="#" title="flower-kbs">daum</a><br>
+<a href="#" title="kbsflower">sist</a><br>
+<a href="#" title="kbs-flower">taeyo</a><br>
+<a href="#" title="flowers">admin</a><br>
+<hr>
+<input><br>
+<input><br>
+<input type="text" ><br>
+<input type="text" ><br>
+<input type="text" ><br>
+<input type="submit" ><br>
+<input type="reset" ><br>
+
+</body>
+</html>

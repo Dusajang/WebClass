@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    span{
+        color: red;
+        background-color: yellow;
+        border: solid 1px gray;
+        width: 300px;
+    }
+</style>
+</head>
+<body>
+<!-- 
+    [span] 태그
+        ㄴ 컨테이너(용기)
+        ㄴ 인라인 모드
+-->
+<span id = "team1">
+    1조 : <br>
+    <span id="s01">이시훈</span><span>김준석</span>
+    <span>최사랑</span>
+    <span>김선우</span><br>
+</span>
+
+<button onclick="spanHide()">숨기기</button>
+<button onclick="spanShow()">보이기</button>
+
+<script>
+    function spanShow(){
+        var team1 = document.getElementById("team1");
+        team1.style.display="inline";
+    }
+
+    function spanHide(){
+        //alert("숨기기 버튼 클릭");
+        // var spn1 = document.getElementById("s01");
+        // spn1.style.display="none";
+        var team1 = document.getElementById("team1");
+        team1.style.display="none";
+    }
+</script>
+
+</body>
+</html>

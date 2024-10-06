@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+
+        position: relative;     /* 이동   t,r,b,l 기준*/
+
+        /* 애니메이션 처리를 위한 속성 지정 */
+        animation-name: sample;
+
+        /* 애니메이션 완료하는 데 걸리는 시간 */
+        animation-duration:4s;
+
+        /* 애미네이션 속도 곡선 : 등속 */
+        animation-timing-function: linear;
+
+        /* 반복횟수 */
+        /* animation-iteration-count: 3; */
+        /* animation-iteration-count: infinite; */
+
+        /* 애미네이션의 시작 전의 지연 시간 */
+        animation-delay: 2s;
+
+        /* 애니메이션 시작 전, 종료 후 요소의 스타일 */
+        /* forwards : 종료 시의 마지막 키 프레임 스타일 유지
+        backwards(기본) : 시작 시의 마지막 키 프레임 스타일 유지 */
+        animation-fill-mode: forwards;
+
+        /* 
+        normal
+        reverse
+        alternate-reverse
+        */
+        animation-direction: alternate-reverse;
+
+        /* 약식 */
+        /* animation: sample 4s linear 2s infinite alternate; */
+    }
+
+    /*규칙 sample 이름 정함*/
+    @keyframes sample{
+        from{   /* from==0% */
+            background-color: red;
+        }
+        to{     /* from==100% */
+            background-color: yellow;
+        }
+    }
+</style>
+</head>
+<body>
+<!-- 
+    [CSS 애니메이션(animation)]    
+    ㄴ js, flash 사용하지 않고 CSS를 사용해서 애니메이션 처리 가능
+    ㄴ 의미 : 하나의 스타일에서 점차 다른 스타일로 변환되는 것.
+    ㄴ css 애니메이션 처리
+        ㄴ 키프레임(keyframe) ? 특정 시간에 가지는 요소의 스타일
+        키프레임+키프레임+키프레임+키프레임... : 애니메이션 효과
+
+    @keyframes      규칙 내에 CSS 스타일 지정.
+    animation-name
+    animation-duration
+    animation-delay
+    animation-iteration-count
+    animation-direction
+    animation-timing-function
+    animation-fill-mode
+    animation
+-->
+    <div></div>
+</body>
+</html>

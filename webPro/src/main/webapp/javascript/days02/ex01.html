@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+
+.box{
+  color: red;
+  font-size: 32px;
+  border: 1px solid gray;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    1. 글색상
+    2. 글크기
+    3. 테두리             
+
+    마우스를 올릴 때 (mouseover 이벤트 처리)
+  </xmp>
+
+  <div id="demo">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, dolorum accusamus. Harum ratione sequi ea unde voluptate, voluptatem tenetur doloremque? Eaque iste recusandae ea nam assumenda repudiandae numquam nostrum omnis.
+  </div>
+
+</div> 
+
+<script>
+  document.querySelector("#demo").onmouseover = function(){
+    // event.srcElement
+    // event.keyCode
+    // jquery event.which
+    // console.log(event.type);
+
+    /*
+    this.style.color = "red";
+    this.style.fontSize = "32px";
+    this.style.border = "1px solid gray";
+    */
+        // this.setAttribute("class", "box");
+      // this.className = "box";
+      // this.classList.add="box";
+
+      // contains(), replace(), toggle(), add(string,string...), remove(string,string...)
+      // this.classList.add("box", "star");
+      this.classList.add("box");
+  }
+</script>
+</body>
+</html>

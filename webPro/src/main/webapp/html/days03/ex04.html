@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script>
+    function areaClick(){
+        window.alert("커피 영역을 클릭!!!");
+    }
+</script>
+</head>
+<body>
+    <!-- [이미지 맵]
+            ㄴ 맵 == 지도 
+            ㄴ 하나의 이미지를 클릭 가능한 영역으로 나눠서 -> 다른 작업 수행
+            ㄴ<map> : 이미지 맵을 정의
+              <area> : 클릭 사능한 영역
+              usemap 속성
+
+              ex04_coffee.html
+              ex04_computer.html
+              ex04_phone.html
+              
+    -->
+
+<img usemap="#workmap" src="../../images/workplace.jpg" alt="work">
+
+<map name="workmap">
+ <area alt="computer" shape="rect" coords="34,44,270,350" href="ex04_computer.html">
+ <area alt="phone" shape="rect"  coords="290,172, 333, 250" href="ex04_phone.html">
+ <!-- js click 이벤트 처리 -->
+ <area onclick="areaClick()" alt="coffee" shape="circle" coords="337,300,44" href="ex04_coffee.html">
+</map>
+
+</body>
+</html>

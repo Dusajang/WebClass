@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  p{
+     border: 1px solid gray;     
+     text-indent: 100px;
+  }
+  
+  h2{
+    letter-spacing: 5px; /* 문자 사이 늘림 */
+  }
+  
+  h3{
+    letter-spacing: -2px; /* 문자 사이 줄임 */
+  }
+  
+  p.small{
+    line-height: 0.7;
+  }
+  p.big{
+    line-height: 1.8;
+  }
+  
+  div{
+    border: 1px solid red;
+    /* word-spacing: 10px; */
+    word-spacing: -2px;
+    
+    /* 공백을 처리하는 방법 지정하는 속성 */
+    /* nowrap : 텍스트의 줄바꿈 비활성화 */
+    white-space:nowrap; 
+  }
+  
+</style>
+</head>
+<body>
+<!-- 
+    [텍스트 간격]
+    1) 단어와 단어 사의 간격 :   word-spacing
+    2) 한 문자와 한 문자 사이의 간격 : letter-spacing
+    3) 라인과 라인 간의 간격 : line-height
+    
+    4) 첫 번째 라인을 들여쓰기 : text-indent 
+    5) 공백을 처리하는 방법 지정. : white-space 
+             ㄴ word-break
+             ㄴ word-wrap
+  -->
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur in corporis similique esse doloremque maxime cupiditate. Autem totam saepe eveniet aperiam enim voluptatibus officiis alias dicta quo mollitia ullam quidem!</p>
+
+<h2>This is Heading 2</h2>
+<h3>This is Heading 3</h3> 
+
+<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur in corporis similique esse doloremque maxime cupiditate. Autem totam saepe eveniet aperiam enim voluptatibus officiis alias dicta quo mollitia ullam quidem!</p>
+
+<p class="big">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur in corporis similique esse doloremque maxime cupiditate. Autem totam saepe eveniet aperiam enim voluptatibus officiis alias dicta quo mollitia ullam quidem!</p>
+
+<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor illum dolorem nobis sed voluptatum doloribus optio minima neque ullam qui. Nulla modi libero nesciunt quia incidunt fugiat illum officia excepturi.</div>
+
+</body>
+</html>

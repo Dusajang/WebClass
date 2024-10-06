@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+
+    *{  /*범용 선택자 특이성 0점*/
+
+    }
+
+    p#first{  /*1점 + 100점*/
+        color: green;
+    }
+
+    #first{
+        color: aqua;
+    }
+
+    p.last{
+
+    }
+    
+    .last{
+        background-color: yellow;
+    }
+
+    p{
+        color: red;
+        text-align: center;
+    }
+
+
+
+
+
+    p{
+        color: blue;
+    }

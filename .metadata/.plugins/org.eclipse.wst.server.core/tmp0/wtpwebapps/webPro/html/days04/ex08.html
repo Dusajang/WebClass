@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	*{
+		box-sizing: border-box;
+	}
+
+	body{
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	div#header{
+		background-color: #666;
+		color: white;
+		padding: 30px;
+		text-align: center;
+		font-size: 35px;
+	}
+
+	div#footer{
+		background-color: #777;
+		color: white;
+		padding: 20px;
+		text-align: center;
+		font-size: 25px;
+	}
+
+	div#nav{
+		width: 30%;
+		background-color: #CCC;
+		height: 500px;
+		padding: 20px;
+
+		float: left;
+	}
+
+	div#article{
+		width: 70%;
+		background-color: #f1f1f1;
+		padding: 20px;
+		min-height: 500px;
+
+		float: left;
+	}
+
+	/* div#section{
+		/* border: 1px solid red; 
+	} */
+
+	div#section::after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+</style>
+<style>
+	/* css 미디어 쿼리 */
+	@media screen and (max-width:800px){
+		div#nav, div#article{
+			width: 100%;
+			height: auto;
+		}
+	}
+</style>
+</head>
+<body>
+<!-- 반응형 웹 구현 : 모든 장치(PC, 스마트폰, 태블릿 등등)에서 웹 사이트의 자동 크기 조정 -->
+ <!-- (CSS 미디어 쿼리) -->
+
+<div id="header">
+	<h2>Cites-시맨틱태그(sementic elements)</h2>
+</div>
+<div id="section">
+	<div id="nav">
+		<ul>
+			<li><a href=""></a>London</li>
+			<li><a href=""></a>Paris</li>
+			<li><a href=""></a>Seoul</li>
+		</ul>
+	</div>
+	<div id="article">
+		<h2>London</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum laudantium dolor atque esse dolore. Magnam facere officiis pariatur reiciendis fugiat magni recusandae quaerat quod dolores obcaecati. Amet similique numquam deleniti!</p>
+		<p>Asperiores molestias autem quas nulla suscipit tenetur mollitia maxime earum totam consectetur quod sunt natus consequatur fuga fugiat explicabo voluptate. Veritatis distinctio amet cupiditate neque optio delectus assumenda. Consectetur velit!</p>
+		<h2>Paris</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa repellat tempore non quod perferendis reiciendis animi aspernatur voluptates nisi quas nobis veritatis quae hic illum similique! Ad excepturi deserunt consequuntur!</p>
+		<p>Et mollitia minus temporibus cum distinctio nostrum beatae. Tempora nostrum molestiae architecto ullam amet nobis ex quidem sint accusantium non repellendus quaerat perferendis aperiam rem alias cum error ducimus perspiciatis.</p>
+		<h2>Seoul</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel natus accusamus aut temporibus at voluptatem eaque doloremque iusto dicta quasi obcaecati commodi velit aspernatur! Assumenda expedita sit nihil dolorem temporibus.</p>
+		<p>Veritatis velit nostrum pariatur facilis commodi id libero est a officiis molestiae dolor atque similique itaque esse modi delectus ratione accusamus reiciendis quos nisi cupiditate aliquam in nulla ut eius.</p>
+	</div>
+</div>
+<div id="footer">
+	<h2>footer</h2>
+</div>
+</body>
+</html>

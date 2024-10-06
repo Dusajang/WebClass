@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .center{
+        border: 3px solid #73ad21;
+        width: 50%;
+        
+        text-align: center;  /*수평 가운데 정렬*/
+        
+        /* 1. 수직 가운데 정렬 : padding:위/아래 70ㅔㅌ*/
+        /* height: 200px; */
+        /* padding: 70px 0; */
+
+        /* 2.  */
+        /* 
+        height: 200px;
+        line-height: 200px; 
+        */
+
+        /* 3. */
+        height: 200px;
+        position: relative;
+    }
+
+    .center p{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+
+        margin: 0;
+        /*좌표 변환 : transform*/
+        transform: translate(-50%, -50%);
+    }
+</style>
+</head>
+<body>
+<h3>세로(수직) 정렬</h3>
+
+<div class="center">
+    <p>hello world!</p>
+</div>
+
+</body>
+</html>

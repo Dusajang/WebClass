@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    div{
+        width: 300px;
+        height: 100;
+        background-color: yellow;
+        border: 1px solid;
+    }
+</style>
+</head>
+<body>
+
+    <input id="rdoClockWise" type="radio" name="direction" value="1" checked="checked">
+    <label for="rdoClockWise">시계방향</label>
+    <input id="rdoReverseClockWise" type="radio"  name="direction" value="-1">
+    <label for="rdoReverseClockWise">반시계방향</label>
+
+    <br>
+    회전속도 : 
+    <input type="range" min="10" max="1000" value="10" id="rspeed">
+    
+    <br>
+    
+    <button>회전 시작</button>
+    <button disabled="disabled">회전 멈춤</button>
+    
+    <p>.</p>
+    <p>.</p>
+    <p>.</p>
+    
+    <div>
+    Lorem ipsum dolor sit amet, consectetur 
+    adipisicing elit. Sit modi eos eum facere 
+    quod architecto!
+    </div>
+
+    <script>
+        // 회전 각도
+        let angle = 1;
+        // 회전 방향      1(시계방향), -1(반시계방향)
+        let direction = 1;
+        // 회전 속도
+        let speed = 10;
+        
+        // 
+        let timer;
+        
+        // 회전 시작 버튼 
+        document.querySelector("button:first-of-type").onclick = function (){
+           //alert("회전 시작 버튼 ")
+           let dirRadios = document.querySelectorAll("input[type=radio][name=direction]");
+           for (var i = 0; i < dirRadios.length; i++) {
+            if(  dirRadios[i].checked ){
+               direction = dirRadios[i].value;  // 1, -1
+               break;
+            }
+          } // for
+          // alert( direction );
+          speed = document.querySelector("#rspeed").value;
+          
+          
+          timer = setInterval( targetRotate, speed);
+          
+          // 회전 멈춤 버튼 활성화
+          document.querySelector("button:last-of-type").disabled = false; 
+          // 회전 시작 버튼 비활성화
+          this.disabled = true; 
+           
+        }
+        // 회전 멈춤 버튼 
+        document.querySelector("button:last-of-type").onclick = function (){
+           //alert("회전 멈춤 버튼 ")
+           clearInterval(timer);
+           
+           this.disabled = true; 
+           document.querySelector("button:first-of-type").disabled = false; 
+           
+        }
+        
+        function targetRotate(){
+           let target = document.querySelector("div");
+           // css   transform:rotate(10deg)  -> js 처리
+           target.style.transform = `rotate(${angle}deg)`;
+           
+           angle +=  parseInt( direction );     
+           // console.log( angle );
+        }
+     </script>
+     
+</body>
+</html>

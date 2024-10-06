@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    #rotate2D, #rotate3D{
+        width: 80px;
+        height: 70px;
+        color: white;
+        position: relative;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 10px;
+        float: left;
+        margin-right: 50px;
+        border-radius: 5px;
+        border: 1px solid #000;
+        background-color: red;
+        margin: 10px;
+    }
+</style>
+</head>
+<body>
+<!-- 
+    [CSS 2d/3d] 비교    
+    div 요소에 마우스를 올리면 2d, 3d 
+-->
+
+<div style="height: 80px">
+    <div id="rotate2D" onmouseover="rotate2d()">rotate2D</div>
+    <div id="rotate3D" onmouseover="rotate3d()">rotate3D</div>
+</div>
+
+
+<script>
+    var angle2d=0, angle3d=0;
+    var timer2d, timer3d;
+    const target2d = document.querySelector("#rotate2D")
+    const target3d = document.querySelector("#rotate3D")
+
+    function rotate2d(){
+        // 이전 회전 동작 중지
+        clearInterval(timer2d);
+
+       timer2d = setInterval(() => {
+        target2d.style.transform="rotate(" + (angle2d++) + "deg)";
+        if (angle2d==180||angle2d==360) {
+            clearInterval(timer2d);
+            if (angle2d==360) angle2d=0;
+        }
+        }, 10);
+    }
+    // 10/1000 == 0.01초
+
+    function rotate3d(){
+         // 이전 회전 동작 중지
+         clearInterval(timer2d);
+
+        timer3d = setInterval(() => {
+        target3d.style.transform="rotateX(" + (angle3d++) + "deg)";
+        if (angle3d==180||angle3d==360) {
+            clearInterval(timer3d);
+            if (angle3d==360) angle3d=0;
+ }
+ }, 10);
+    }
+    
+</script>
+</body>
+</html>

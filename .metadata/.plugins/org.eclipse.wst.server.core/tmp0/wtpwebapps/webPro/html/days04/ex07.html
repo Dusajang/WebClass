@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- emmet -->
+ <!-- http://download.emmet.io/eclipse/updates/ -->
+<!-- div#page>div.logo+ul#navigation>li*5>a -->
+<!-- emmet 구문은 [css 선택자]와 유사하다. -->
+<pre></pre>
+<!-- 중첩 연산자 '>' -->
+<!-- div>ul>li*3 -->
+<div>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div> 
+
+<!-- div>div+p+span -->
+<div>
+	<div></div>
+	<p></p>
+	<span></span>
+</div>
+
+<!-- div+p+bq -->
+<div></div>
+<p></p>
+<blockquote></blockquote>
+
+<!-- '^'상위로 올라간다. -->
+<div>
+	<p><span></span><em></em></p>
+</div>
+<div></div>
+
+<!-- div+div>p>span+em^^bq -->
+<!-- div+(div>p>span+em)+div -->
+<div></div>
+<div>
+	<p><span></span><em></em></p>
+</div>
+<blockquote></blockquote>
+
+<!-- (ul>li*3)*2       () 그룹화-->
+<!-- ul*2>li*3 -->
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+<ul>
+	<li></li>
+	<li></li>
+	<li></li>
+</ul>
+
+
+<!-- div>(header>ul>li*2>a)+(footer>p) -->
+<div>
+	<header>
+		<ul>
+			<li><a href=""></a></li>
+			<li><a href=""></a></li>
+		</ul>
+	</header>
+	<footer>
+		<p></p>
+	</footer>
+</div>
+
+<!-- (div>dl>(dt+dd)*3)+(footer>p) -->
+<div>
+	<dl>
+		<dt></dt>
+		<dd></dd>
+		<dt></dt>
+		<dd></dd>
+		<dt></dt>
+		<dd></dd>
+	</dl>
+</div>
+<footer>
+	<p></p>
+</footer>
+
+<!-- 속성 연산자 -->
+<dir id="demo"></dir>
+
+<!-- div[id] -->
+<div id=""></div>
+<!-- div[id="demo"] -->
+<div id="demo"></div>
+<!-- div#demo -->
+<div id="demo"></div>
+<!-- #demo -->
+<div id="demo"></div>
+
+<!-- div[class=box] -->
+<div class="box"></div>
+<!-- div.box -->
+<div class="box"></div>
+<!-- .box -->
+<div class="box"></div>
+<!-- #demo.box -->
+<div id="demo" class="box"></div>
+
+<!-- #header+.page+#footer.class1.class2.class3 -->
+<div id="header"></div>
+<div class="page"></div>
+<div id="footer" class="class1 class2 class3"></div>
+
+<!-- td[colspan=3 title="Hello World"] -->
+<td colspan="3" title="Hello World"></td>
+
+<!-- ul>li*5>{item$} -->
+<ul>
+	<li>item1</li>
+	<li>item2</li>
+	<li>item3</li>
+	<li>item4</li>
+	<li>item5</li>
+</ul>
+
+
+<!-- ul>li.item$$*5>{item$$$} -->
+<ul>
+	<li class="item01">item001</li>
+	<li class="item02">item002</li>
+	<li class="item03">item003</li>
+	<li class="item04">item004</li>
+	<li class="item05">item005</li>
+</ul>
+
+<!-- ul>li*5>{item$@-} -->
+<ul>
+	<li>item5</li>
+	<li>item4</li>
+	<li>item3</li>
+	<li>item2</li>
+	<li>item1</li>
+</ul>
+
+<!-- ul>li*5>{item$@11} -->
+<ul>
+	<li>item11</li>
+	<li>item12</li>
+	<li>item13</li>
+	<li>item14</li>
+	<li>item15</li>
+</ul>
+
+<!-- {텍스트} -->
+
+<!-- a[href]>{텍스트} -->
+<!-- a{텍스트} -->
+<a href="">텍스트</a>
+
+<!-- p>{Click}+(a>{here})+{to continue} -->
+<p>Click<a href="">here</a>to continue</p>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

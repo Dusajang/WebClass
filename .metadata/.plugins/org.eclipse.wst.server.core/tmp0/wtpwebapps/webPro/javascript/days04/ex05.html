@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+       [js Object(객체)]                  
+  </xmp>
+</div> 
+
+<script>
+  // js object 타입 - function, array, date, Object 등등
+  // let person;
+  // alert(person);    undefined
+  // alert(typeof person);    undefined
+
+  //객체를 선언할 때는 const 키워드를 사용한다.
+  // const person = {
+  //   //자바라면 필드 
+  //   name : "hong gil dong"
+  //   , age : 20
+  //   //메서드
+  //   , printPerson:function(){
+  //     //this==객체 자기 자신
+  //     return `name=S{this.name}, age=${this.age}`;
+  //   }
+  // };
+  // alert(person)
+  // alert(typeof person)
+
+  //객체명.필드명
+  //객체명["필드명"]
+  // alert(person.name);
+  // alert(person["name"]);
+
+  //객체명.메서드명()
+  //person.printPerson();
+</script>
+<script>
+  /*
+  const person = {};
+
+  // 속성(properties) 추가
+  person.name = "홍길동";
+  person.age = 20;
+  person.printPerson = function(){}
+  */
+</script>
+<script>
+  //js 새로운 객체 생성
+  // const person = {};
+  const person = new Object();   // 굳이 이렇게 생성할 필요는 없다.
+
+   // 속성(properties) 추가
+  person.name = "홍길동";
+  person.age = 20;
+  person.printPerson = function(){}
+</script>
+</body>
+</html>

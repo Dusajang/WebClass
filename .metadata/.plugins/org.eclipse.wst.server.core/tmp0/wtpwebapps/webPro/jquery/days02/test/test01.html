@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+
+ #content{
+  width: 300px;
+  height: 100px;
+  border: 1px solid black;
+  overflow: auto;
+ }
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+
+  <b>이름 입력: </b><input type="text" id="txtContent"
+  class="long"
+  placeholder=""
+  autofocus="autofocus">
+<br>
+  <button class="click">추가</button>
+
+  <div id="content"></div>
+
+
+  <script>
+    const btnExec = document.querySelector("button.click");
+  
+    btnExec.onclick = function() {
+      let input = document.querySelector("#txtContent").value;
+      const content = document.querySelector("#content");
+      content.innerHTML += `<span style='color:red; background-color:yellow'>${input}</span><br>`;
+
+    }
+  </script>
+
+</div> 
+</body>
+</html>

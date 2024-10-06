@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!-- 뷰포트 ? 동일한 웹 페이지가 다양한 기기에 맞춰 크기, 배율을 제어하는 것 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  body{
+      font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  div#header{
+    background-color: #666;   
+    color:white;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+  } 
+  
+  div#footer{
+    background-color: #777;   
+    color:white;
+    padding: 20px;
+    text-align: center;
+    font-size: 25px;
+  }
+  
+  div#nav{
+    width: 30%; 
+    background-color: #ccc; 
+    height: 500px;
+    padding: 20px;
+    
+    
+  }
+  
+  div#article{
+     width: 70%;
+     background-color: #f1f1f1;
+     padding: 20px;
+     min-height: 500px;
+     
+      
+  }
+  
+  div#section{
+    /* border:solid 1px red; */
+    display: flex;
+  }
+  
+  div#section::after{
+     content:"";
+     display: table;
+     clear: both;
+  }
+</style>
+<style>
+ /* css 미디어 쿼리 */
+ @media screen  and ( max-width:800px){
+    div#nav, div#article{
+       width:100%;
+       height:auto;
+    }
+ }
+</style>
+</head>
+<body>
+ 
+<header>
+	<h2>Cites-시멘틱태그(sementic elements)</h2>
+</header>
+<section>
+	<nav>
+		<ul>
+			<li><a href="#">London</a></li>
+			<li><a href="#">Paris</a></li>
+			<li><a href="#">Seoul</a></li>
+		</ul>
+	</nav>
+	<article>
+		<h2>London</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores nulla soluta sunt aut assumenda fugiat deleniti magnam sequi minima explicabo debitis perspiciatis iusto amet corporis minus illo aperiam quasi numquam!</p>
+		<p>Aliquid laudantium ducimus assumenda sequi dolore blanditiis temporibus esse iure! Veniam numquam aspernatur excepturi ipsum nemo inventore! Quaerat autem inventore voluptatibus deserunt dolores iste explicabo odit eum asperiores saepe dolor.</p>
+		<h2>Paris</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur corrupti itaque aliquid magni porro aspernatur possimus est nulla doloribus dignissimos modi nam nemo! Maiores veniam inventore sequi aliquid aut omnis!</p>
+		<p>Eveniet quod cupiditate ratione soluta sed maxime vitae consequatur placeat consectetur fuga ipsum repellat laborum reiciendis cumque aperiam atque provident inventore quia assumenda aliquam. Quas dolor accusantium possimus ex maiores!</p>
+		<h2>Seoul</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde asperiores commodi aperiam hic. Dolorum asperiores nemo voluptates quo architecto ullam. Delectus aut quas facere. Voluptas fugiat omnis veritatis in fuga!</p>
+		<p>Dolorem tempora aperiam nam ullam vel expedita maiores magnam labore ratione vitae adipisci laboriosam cumque tenetur possimus hic est eum necessitatibus nulla minus dolore dignissimos autem quam distinctio omnis quia.</p>
+	</article>
+</section> 
+<footer>
+	<h2>Footer</h2>
+</footer>
+
+</body>
+</html>

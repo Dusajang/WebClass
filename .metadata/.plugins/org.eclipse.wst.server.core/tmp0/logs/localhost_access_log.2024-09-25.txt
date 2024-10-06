@@ -1,0 +1,12 @@
+127.0.0.1 - - [25/Sep/2024:10:15:32 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [25/Sep/2024:10:15:33 +0900] "GET /webPro/css/days05/ex03_02.html HTTP/1.1" 200 1517
+0:0:0:0:0:0:0:1 - - [25/Sep/2024:10:15:33 +0900] "GET /webPro/css/images/pineapple.jpg HTTP/1.1" 200 16497
+0:0:0:0:0:0:0:1 - - [25/Sep/2024:10:15:33 +0900] "GET /webPro/images/SiSt.ico HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [25/Sep/2024:10:17:04 +0900] "GET /webPro/images/SiSt.ico HTTP/1.1" 200 102255
+0:0:0:0:0:0:0:1 - - [25/Sep/2024:15:53:35 +0900] "GET /webPro/javascript/ex02.html HTTP/1.1" 200 928
+0:0:0:0:0:0:0:1 - - [25/Sep/2024:15:53:35 +0900] "GET /webPro/resources/cdn-main/example.css HTTP/1.1" 200 14742
+0:0:0:0:0:0:0:1 - - [25/Sep/2024:15:53:35 +0900] "GET /webPro/resources/cdn-main/example.js HTTP/1.1" 200 4612
+127.0.0.1 - - [25/Sep/2024:16:07:56 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [25/Sep/2024:16:07:57 +0900] "GET /webPro/javascript/days01/ex02.html HTTP/1.1" 200 969
+0:0:0:0:0:0:0:1 - - [25/Sep/2024:16:08:01 +0900] "GET /webPro/resources/cdn-main/example.css HTTP/1.1" 200 14742
+0:0:0:0:0:0:0:1 - - [25/Sep/2024:16:08:01 +0900] "GET /webPro/resources/cdn-main/example.js HTTP/1.1" 200 4612

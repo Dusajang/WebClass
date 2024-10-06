@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    div{
+        width: 300px ;
+        height: 100px;
+        background-color: yellow;
+        border: 1px solid;
+
+        /* 1. 2D변환 - 이동 */
+        /* transform: translate(50px, 100px); */
+
+        /* 2. 2D 변환 - 회전  지전된 각도 시계방향(양수) / 반시계방향(음수)*/
+        /* transform: rotate(-20deg); */
+
+        /* 3. 2D변환 - 크기 조정 */
+        /* transform: scaleX(0.5); */
+        /* transform: scaleY(2); */
+        /* transform: scale(0.5, 2); */
+
+        /* 4. 2D변환 - 기울이기 */
+        /* transform: skewX(45deg); */
+        /* transform: skewY(45deg); */
+        /* transform: skew(20deg, 0); */
+
+                        /* sclaeX, skewY, skewX, scaleY, transX, transY */
+        transform: matrix(1, -0.3, 0, 1, 0, 0);
+    }
+</style>
+</head>
+<body>
+<pre>
+    CSS 변환을 사용하면 요소를 이동, 회전, 크기조정, 기울이기 가능
+    1) CSS 2D 변환   
+        transform 속성 == 변환 
+            : 이동 translate()
+            : 회전 rotate()
+            : 크기조정 scale() sckeX() skewY()
+            : 기울이기 skew() skewX() skewY()
+
+            약식 matrix(scaleX skewY skewX scalY translateX translateY)
+    1) CSS 3D 변환
+</pre>
+
+<div>
+    Lorem ipsum dolor sit amet, consectetur 
+    adipisicing elit. Alias impedit rerum quas 
+    minus eius perferendis reprehenderit eveniet 
+</div>
+
+</body>
+</html>

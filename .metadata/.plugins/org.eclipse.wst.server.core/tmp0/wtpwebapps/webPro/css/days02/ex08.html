@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  *{
+    box-sizing: border-box;
+  }
+  .pagination{
+    /* background-color: red; */
+    text-align: center;
+    width: 50%;
+    
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .pagination a{
+    text-decoration: none;
+    color:black;
+    
+    float: left;
+    width: 8.3%;
+  }
+  .pagination a:hover{
+    background-color: #ddd;
+  }
+  .pagination a.active{
+    background-color: dodgerblue;
+    color:white;
+  }
+</style>
+</head>
+<body>
+<h3>css 페이징 처리 블럭</h3>
+
+<!-- .pagination>a*12>{$} -->
+<div class="pagination">
+	<a href="1">1</a>
+	<a href="2">2</a>
+	<a href="3" >3</a>
+	<a href="4">4</a>
+	<a href="5">5</a>
+	<a href="6">6</a>
+	<a href="7">7</a>
+	<a href="8" class="active">8</a>
+	<a href="9">9</a>
+	<a href="10">10</a>
+	<a href="11">&gt;</a>
+	<a href="35">&raquo;</a>
+</div>
+
+<script>
+  // attr(), prop()
+  // DOM getAttribute()
+  $(".pagination > a").attr("href", function (i, val){
+	  return "ex08.html?page=" + val;
+  } );
+  
+  
+  // 다른 페이지번호를 클릭했다고 하면 
+  // 클릭된 a 태그의 style 수정하는 jquery  코딩. 
+  $(".pagination > a").on("click", function (){
+	  // alert( $(this).text() );
+	  // a href 속성값을 얻어오고자.. jquery
+	  
+	  //alert( $(this).attr("href"));
+	  //alert( $(this).prop("href"));
+	  
+	  // jquery method  active 클래스 속성 추가
+	  // not()  jquery method
+	  // addClass() / removeClass() juqery method
+	  $(".pagination > a").not(this).removeClass("active");
+	  $(this).addClass("active");
+	  
+	  // alert("STOP");
+	  event.preventDefault();
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

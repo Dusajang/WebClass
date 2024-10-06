@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    p{
+        background-color: yellow;
+        padding: 20px;
+
+        display: none;
+    }
+
+    /*
+    div:hover p{  마우스가 올라간  div 태그의 p 태그를.....
+        display: block;
+    }
+    */
+
+</style>
+</head>
+<body>
+<!-- 
+    :의사 클래스
+        ㄴ 요소의 특정 상태를 정의하는데 사용
+    a:hover
+    input:focus
+    
+    ::의사요소
+        ㄴ 요소의 지정된 부분에 스타일을 지정하는 데 사용
+        ㄴ 첫 글자
+        ㄴ 첫 라인
+        ㄴ 요소의 내용 앞/뒤에 삽입하고자 할 때
+-->
+
+<div>
+    Lorem ipsum dolor sit amet, 
+    consectetur adipisicing elit.
+    Deleniti earum.
+    <p>
+      --- Lorem ipsum dolor.
+    </p>
+  </div>
+
+  <script>
+    //div 요소에 마우스를 올리면 p 자식 요소를 보이게 하고
+    //     "     마우스를 내리면      "       안 보이게 하자
+    
+    // mouseover
+    // mouseout
+
+    /*
+    const div = document.querySelector("div");
+    const p = document.querySelector("div > p");
+
+    div.onmouseover = function(){
+        p.style.display = "block";
+    };
+    div.onmouseout = function(){
+        p.style.display = "none";
+    };
+    */
+  </script>
+
+  <script>
+    //jquery 수정
+    /*
+    const div = $("div");
+    const p = $("p");
+
+    div.on("mouseover", function(){
+        p.show();
+    })
+    div.on("mouseout", function(){
+        p.hide();
+    })
+    */
+
+    //jquery 수정 2.
+    /*
+    $("div").hover(
+        function(){      //mouseover
+            $("div>p").show();
+        };
+        function(){     //mouseout
+            $("div>p").hide();
+        };
+
+    );
+    */
+   //jquery 수정 3.
+   $("div").hover(function(){
+    $("div>p").toggle();
+   })
+
+
+
+  </script>
+</body>
+</html>

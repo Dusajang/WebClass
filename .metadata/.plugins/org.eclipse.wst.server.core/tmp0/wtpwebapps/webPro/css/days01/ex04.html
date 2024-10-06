@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	*{  /*범용선택자    0점*/
+
+	}
+
+	h1, h2, h3, h4, h5, h6{    /*그룹선택자*/
+		border: 1px solid gray;
+	}
+
+	/*div 태그 안의 모든 a 후손 자식*/
+	div > a{
+		font-size: 40px;
+		color: black;
+	}
+
+	div + p{
+		background-color: red;
+	}
+
+	/*p 요소 뒤에 오는 모든 div 형제 태그(요소)*/
+	p ~ div{
+		border-width: 10px;
+	}
+</style>
+</head>
+<body>
+
+	<!-- 
+		[CSS 선택자(selector)]
+		1) 단순선택자 : 태그명, #아이디명, .클래스명, *범용선택자
+					그룹화선택자
+		2) 조합선택자 :  요소 간의 특정 관계를 기반으로 하는 선택자
+			ㄱ. 요소   요소 : 모든 후손   div a
+			ㄴ. 요소 > 요소 : 직계 자식   div > a
+			ㄷ. 요소 + 요소 : 바로 뒤 형제 요소 div + p
+			ㄹ. 요소 ~ 요소 : 
+	-->
+
+	<a href="">Lorem.</a>
+	<a href="">Saepe.</a>
+	<a href="">Tempora!</a>
+
+	<div>
+		111
+		<a href="#">XXX</a><br>
+		<a href="#">XXX</a><br>
+		<p>
+			222
+			<a href="#">YYY</a><br>
+		</p>
+		<a href="#"></a>
+	</div>
+
+	<p id="p1" class="second">Lorem.</p><br>
+	<p id="p2" class="second">Laudantium?</p><br>
+
+	<div>Lorem.</div>
+	<div class="second">ZZZ</div>
+	<div>Consequuntur?</div>
+
+</body>
+</html>

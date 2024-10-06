@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .box{
+        border: 1px solid gray;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+    }
+
+    /*div:nth-child(2){*/
+    /*div:nth-last-of-type(2){*/
+    div:first-of-type{
+        background-color: green;
+        position: static;
+        /*기본값, 항상 페이지의 일반적인 흐름(인라인, 블럭)에 따라 위치가 지정된다*/
+    }
+
+    div:nth-of-type(2){
+        background-color: yellow;
+        position: relative;
+        /*상대 좌표
+            ㄴ 기준
+        */
+        left: 10px;
+        top: 10px;
+    }
+
+    div:nth-of-type(3){
+        background-color: red;
+        position: fixed;
+        /* 위치 고정 */
+        right: 10px;
+        bottom: 10px;
+    }
+
+    div:nth-of-type(4){
+        background-color: blue;
+        position: absolute;
+        /* 절대 좌표 : 가장 가까운 위치의 조상<body>을 기준으로하는 좌표 */
+        left: 50px;
+        top: 25px;
+
+        z-index: -1; /*큰 수가 위로 올라옴*/
+    }
+</style>
+</head>
+<body>
+
+
+<script>
+    //[js] 반복문을 사용해서 div 5개 동적 생성 + position 속성
+    for (var i = 1; i <= 5; i++) {
+		const divElement = document.createElement("div")
+        // divElement.innerText = "Box - " + i;
+        divElement.innerText = `Box - ${i}`;
+        divElement.className="box";   
+        document.body.appendChild(divElement);
+	}
+</script>
+</body>
+</html>

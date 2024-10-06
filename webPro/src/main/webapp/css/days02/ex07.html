@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  ul{
+    list-style-type: lower-roman;
+    /* 1. 목록항목의 마커를 이미지로 지정 */
+    list-style-image: url('../images/sqpurple.gif');
+  }
+  
+  /* 2. 마커 위치 지정 */
+  ul.a{
+     list-style-position: inside;
+  }
+  ul.b{
+     list-style-position: outside;
+  }
+  
+  ul > li{
+     border:1px solid gray;
+  }
+  
+  /* ul, ol 의 기본 설정 제거 */
+  ul, ol{
+    list-style-type: none;
+  }
+</style>
+</head>
+<body>
+<!--
+     [CSS 목록] 
+ -->
+<!-- ul.a>li*3>lorem1 --> 
+<ul class="a">
+	<li>Lorem.</li>
+	<li>Consequatur?</li>
+	<li>Vitae.</li>
+</ul>
+
+<ul class="b">
+	<li>Lorem.</li>
+	<li>Consequatur?</li>
+	<li>Vitae.</li>
+</ul>
+
+<ol>
+	<li>Lorem.</li>
+	<li>Consequatur?</li>
+	<li>Vitae.</li>
+</ol> 
+</body>
+</html>

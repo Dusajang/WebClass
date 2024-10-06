@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    /* CSS 적용하는 방법 첫 번째 - head태그 안에 style 태그로 설정
+        내부적(internal) CSS 적용방법
+
+        css selector
+        (1) 태그명
+        (2) 아이디명
+
+        [css 특이성]
+        - 동일한 요소를 가리키는 css 규칙이 두 개 이상 있는 경우
+          특이성 값이 가장 높은 선택자의 스타일이 적용된다.
+        - 특이성 == 점수 == 순위
+            ㄴ 최종적으로 어떤 스타일이 적용될지를 결정하는 점수
+            ㄴ 특이성 값을 계산하는 방법
+                1) 태그명   1점
+                2) #아이디명   100점
+                3) .클래스명   10점
+    */
+
+    #xx p#first .last{  /*특이성 100점 + 1점 + 100점 + 10점*/
+
+    }
+
+
+    *{  /*범용 선택자 특이성 0점*/
+
+    }
+
+    p#first{  /*1점 + 100점*/
+        color: green;
+    }
+
+    #first{
+        color: aqua;
+    }
+
+    p.last{
+
+    }
+    
+    .last{
+        background-color: yellow;
+    }
+
+    p{
+        color: red;
+        text-align: center;
+    }
+
+
+
+
+
+    p{
+        color: blue;
+    }
+</style>
+</head>
+<body>
+    <!-- [CSS]
+    - Cascading Style Sheets 약어
+    계단식
+    떨어뜨리다
+    작은 폭포
+    단계적으로 행하다
+    - html <= html 화면 구성
+    - 문서 스타일 지정하는 언어 
+    - html 요소가 화면, 종이, 기타 미디어에 표시되는 방법을 지정
+    - 여러 웹 페이지의 레이아웃을 한 번에 제어할 수 있다.
+    - CSS 구문
+        스타일 적용 대상{    == 선택자 == css selector
+            속성명:속성값;
+            속성명:속성값;
+            속성명:속성값;
+            속성명:속성값;
+        }
+
+        html 단위 생략 : px
+        css 단위 생략 X(예외 - 0이면 생략 가능)
+    
+    -->
+
+    <p id="first">Lorem ipsum dolor sit amet.</p>
+    <p class="last">Vitae quo asperiores quidem veritatis.</p>
+
+    <!-- CSS 적용 두 번째 방법 : inline CSS 적용 방법 -->
+    <!-- 어떤 태그의 style 속성으로 스타일 지정 특이성 : 1000점 -->
+    <div style="color: navy;">Lorem ipsum dolor sit.</div>
+    <div>Distinctio repudiandae omnis error!</div>
+    <div>Quos, quasi velit! Vitae!</div>
+    <div>Voluptatem, nesciunt amet? Itaque?</div>
+</body>
+</html>

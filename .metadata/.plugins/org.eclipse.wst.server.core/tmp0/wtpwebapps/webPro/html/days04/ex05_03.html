@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    div{
+        background-color: yellow;
+    }
+    span{
+        border: solid 1px red;
+    }
+</style>
+</head>
+<body>
+
+
+<button id="btnSH">숨기기</button>
+
+<br>
+<div id="demo">
+    <span>이시훈</span><br>
+    <span>김준석</span><br>
+    <span>짐재민</span>
+</div>
+
+<script>
+    /*
+    $("#btnSH").click(function (){
+        console.log("click...")
+    });
+    */
+
+    var sw = true;
+    $("#btnSH").on("click", function(){
+
+        //alert($(this).text)
+    	console.log("click...");
+
+        $("demo").css("visibility", sw ? "hidden" : "vidible");
+        //this.innerText="보이기";
+        $(this).text(sw ? "보이기" : "숨기기");
+        sw=!sw;
+    });
+</script>
+
+</body>
+</html>

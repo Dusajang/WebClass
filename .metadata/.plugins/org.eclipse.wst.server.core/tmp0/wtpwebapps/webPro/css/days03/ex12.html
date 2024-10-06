@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    *{
+    box-sizing: border-box;
+  }
+  body{
+     font-family: Arial;
+     border:1px solid red;
+     padding:20px;
+     
+     max-width: 800px;
+     margin: 0 auto;
+     height: 100%;
+  }
+  
+  .row::after{
+     content: "";
+     clear: both;
+     display: table;
+  }
+</style>
+
+<style>
+    /* 막대 그래프 그리기 */
+    .side{
+        float: left;
+        width: 15%;
+        margin-top: 10px;
+    }
+    .middle{
+        float: left;
+        width: 70%;
+        margin-top: 10px;
+    }
+    .middle .bar-container{
+        width: 100%;
+        background-color: #f1f1f1;
+        text-align: center;
+        color: white;
+    }
+    .right{
+        text-align: right;
+    }
+
+    .bar-1{
+        background-color: red;
+        height: 18px;
+        width: 20%;
+    }
+    .bar-2{
+        background-color: green;
+        height: 18px;
+        width: 80%;
+    }
+    .bar-3{
+        background-color: blue;
+        height: 18px;
+        width: 15%;
+    }
+    .bar-4{
+        background-color: yellow;
+        height: 18px;
+        width: 55%;
+    }
+</style>
+</head>
+<body>
+    <h3>설문조사 - 막대그래프</h3>
+
+    <div class="row">
+      <div class="side">
+        <div>1 star</div>
+      </div>
+      <!-- ■■■■■■■■■■■ -->
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-1"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>20</div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="side">
+        <div>2 star</div>
+      </div>
+      <!-- ■■■■■■■■■■■ -->
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-2"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>80</div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="side">
+        <div>3 star</div>
+      </div>
+      <!-- ■■■■■■■■■■■ -->
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-3"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>15</div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="side">
+        <div>4 star</div>
+      </div>
+      <!-- ■■■■■■■■■■■ -->
+      <div class="middle">
+        <div class="bar-container">
+          <div class="bar-4"></div>
+        </div>
+      </div>
+      <div class="side right">
+        <div>55</div>
+      </div>
+    </div>
+
+    <script>
+        /*
+        //1 star에 해당되는 20값을 랜덤하게 발생시켜서
+        // 그 값만큼 막대그래프 그리기...
+
+        //[js]    0.0 <= Math.random()  <1.0
+        //        0   <=  정수  <  100
+
+        let n = Math.floor( Math.random()*101 );
+        console.log(n);
+        //body > div:nth-child(2) > div.side.right > div
+        const star1ValueDiv = document.querySelector("body > div:nth-child(2) > div.side.right > div")
+        star1ValueDiv.innerText = n;
+
+        const bar1 = document.querySelector(".bar-1");
+        bar1.style.width = n + "%";
+        */
+    </script>
+    <script>
+        let n = Math.floor( Math.random()*101 );
+        const star1ValueDiv = $("body > div:nth-child(2) > div.side.right > div").text(n);
+        const bar1 = $(".bar-1")
+        bar1.css("width", n + "%")
+    </script>
+</body>
+</html>

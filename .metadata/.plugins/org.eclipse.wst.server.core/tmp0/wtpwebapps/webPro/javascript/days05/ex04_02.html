@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+     [js 문자열 메서드]
+String length   : 문자열 길이 속성
+String charAt() : 지정된 위치에 있는 한 문자를 반환
+String charCodeAt() : UTF-16(0~65535) 문자코드 값을 반환
+String at() : 지정된 위치에 있는 한 문자를 반환
+String [ ] : js 문자열을 배열처럼 사용.
+
+String slice() : 
+String substring() :
+String substr() :
+
+                 
+  </xmp>
+</div> 
+
+<script>
+  let msg = "ABCDEFGHIJ"
+  // 1. 문자열의 길이
+  // alert(msg.length); //10
+
+  // 2.
+  // alert(msg.charAt(0));  // 'A'
+
+  //3.
+  // alert(msg.charCodeAt(0));  //65
+
+  //4. 
+  // alert(msg.at(0));   // 'A'
+  // charAt() 와 at() 차이점
+  //마지막 한 문자   ES2022 도입
+  // msg.charAt(msg.length-1);
+  // msg.at(-1);
+
+  //5. []  읽기 전용
+  // msg[0]="X";  불가능
+  // alert(msg[0]);   // A
+
+  //6. 
+  // String slice(start, end)    음수(뒤에서부터) 가능
+  // String substring(start, end) 
+  // String substr(start, length) 
+  let rrn = "891223-1700014";
+  // let year = rrn.slice(0, 2);
+  // let year = rrn.substring(0, 2);
+  // alert(year);
+
+  // let lastRrn = rrn.slice(-1); // 4
+  // let lastRrn = rrn.substring(rrn.length-1);   //4
+  // alert(lastRrn);
+
+  // 주민등록번호 뒷자리 7자리...
+  // let rrn7 = rrn.slice(-7);
+  // let rrn7 = rrn.substring(7);
+  // alert(rrn7);
+
+  // month = rrn.slice(2, 4);
+  // month = rrn.substring(2, 4);
+  // month = rrn.substr(2, 2);
+
+  
+  // day = rrn.slice(4, 6);
+  // day = rrn.substring(4, 6);
+  // day = rrn.substr(4, 2);
+  // alert(day);
+</script>
+</body>
+</html>

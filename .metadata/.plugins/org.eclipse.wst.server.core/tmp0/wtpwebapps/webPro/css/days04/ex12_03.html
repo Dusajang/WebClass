@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+     div{
+    width: 300px;
+    height: 100px;
+    background-color: yellow;
+    border:1px solid;
+  }
+
+  div#box{
+    /* 3d 변환 */
+    /* transform: rotateX(180deg); */
+    /* transform: rotateY(110deg); */
+    /* transform: rotateZ(90deg); */
+    /* transform: rotate3d(x,y,z, 45deg); */
+  }
+</style>
+</head>
+<body>
+<!-- 
+    [CSS 3D 변환]    
+    2D : X축, Y축
+    3D : X축, Y축, Z축
+        transform 속성
+        이동    : translate3d(x,y,z)
+                : translateX()
+                : translateY()
+                : translatez()
+        회전    : rotate3d(x,y,z)
+                : rotateX()
+                : rotateY()
+                : rotateZ()
+        크기    : scale3d(x,y,z)
+                : scaleX() 
+                : scaleY() 
+                : scaleZ() 
+        기울기  : X
+
+        약식 
+        matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)
+-->
+
+<button>회전 시작</button>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<div>Lorem ipsum dolor sit.</div>
+<div id="box">Lorem ipsum dolor sit.</div>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+
+<script>
+    var angle = 1;
+    var timer ;
+    
+    document.querySelector("button").onclick = function (){
+       // alert( event.srcElement )
+      timer = setInterval(() => {
+        //
+        let target = document.querySelector("#box");
+        target.style.transform = "rotateZ("+angle+"deg)";
+        /* target.style.transform = "rotateX("+angle+"deg)"; */
+        // target.style.transform = "rotateY("+angle+"deg)";
+        angle++;
+     }, 10);
+    }
+    </script> 
+
+</body>
+</html>

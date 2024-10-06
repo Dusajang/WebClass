@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    [this 정리]
+      함수 안에서의 this는 object 최상위 객체
+      2. 이벤트 핸들러 안에서의 this는 이벤트를 받은 객체(요소)       
+      3. 객체 메서드에서는 this는 객체 자기 자신을 나타낸다.    
+      4. 엄격모드에서 단독으로 사용할 때의 this는 object 최상위 객체
+          함수 안에서의 this는 undefined
+  </xmp>
+
+
+  <button onclick="btn_click(this)">버튼1</button>
+  <button id="btn2">버튼1</button>
+
+</div> 
+
+<script>
+  //ES6 가변인자
+  //    int...args
+  function sum(...args){
+    let result = 0;
+    for (let i = 0;gs< args.length; i++) {
+      result += args[i]
+    }
+    return result;
+  }
+</script>
+<script>
+  "use strict";   //엄격모드
+  let x = this;  // [object Window]
+  // alert(x);
+  // test();
+
+  function test(){
+    alert("XXX" + this);
+    return this
+  }
+</script>
+<script>
+  // js 배열 []
+  // js 객체 {}
+  const person = {
+    name : "홍길동",
+    age : 20,
+    //객체메서드
+    disp:function(){
+      return this.na,e + "/" + this.age
+      //여기서 this는 객체 자기 자신
+    }
+  };
+
+
+  function btn_click(btn){
+    // alert(btn)    [object HTMLButtonElement]
+    // alert(event.srcElement)
+    // alert(this);    [object Window]
+  }
+  // document.querySelector("#btn2").onclick = function(){
+  //   // alert(this);   [object HTMLButtonElement]
+  // }
+  document.querySelector("#btn2").onclick =()=>{
+    // alert(this);   [object Window]
+  }
+</script>
+</body>
+</html>

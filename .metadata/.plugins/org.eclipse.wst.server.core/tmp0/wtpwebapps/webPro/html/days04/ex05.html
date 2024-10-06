@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<style>
+    div{
+        background-color: yellow;
+    }
+    span{
+        border: solid 1px red;
+    }
+</style>
+</head>
+<body>
+
+<!-- 안녕하세요. <span>홍길동</span>입니다<br>
+안녕하세요. <div style="display:inline;">홍길동</div>입니다 -->
+
+
+<!-- 
+    [div]
+        ㄴ 다른 html요소의 컨테이너 사용
+        ㄴ 블럭모드
+        
+    [span]
+        ㄴ 다른 html요소의 컨테이너 사용
+        ㄴ 인라인모드
+-->
+<!-- 이벤트 처리 방법 1 : 요소 이벤트 처리하는 onXXX 속성 -->
+<button onclick="demoHide">숨기기</button>
+<!-- 이벤트 처리 방법 2 : 요소 이벤트 처리하는 onXXX 속성 -->
+<button id="btnShow">보이기</button>
+<br>
+<div id="demo">
+    <span>이시훈</span><br>
+    <span>김준석</span><br>
+    <span>짐재민</span>
+</div>
+
+<script>
+var demo = document.getElementById("demo");
+
+function demoHide(){
+    demo.style.display = "none";
+}
+
+var btnShow = document.getElementById("btnShow");
+
+btnShow.onclick = function(){
+    // alert("이벤트 확인");
+    demo.style.display = "block";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+      [js 객체 생성자 함수]
+      - 동일한 유형의 객체를 많이 만들어야 할 경우
+      - 생성자 함수의 이름은 대문자로 시작(권장)
+
+      -js 내장된 객체 생성자 함수]
+      new Object();    ==    {}
+      const p = new Object()
+      const p = {}  (권장)
+
+      new Array();
+      const m = new Array();
+      const m = [];(권장)
+
+      new Map();
+      new Set();
+      new Date();
+
+      new RegExp();
+      const r = new RegExp();
+      const r = /()/ (권장)
+
+      new Function();
+      const func = (){} (권장)
+
+
+
+
+      자바라면
+      class Person{
+        // 디폴트 생성자
+        public Person(){}
+        public Person(String name, int age){
+          this.name = name;
+          this.age = age;
+        }
+      }     
+      Person p1 = new Person("홍길동1", 20)              
+      Person p2 = new Person("홍길동2", 20)              
+      Person p3 = new Person("홍길동3", 20)              
+      Person p4 = new Person("홍길동4", 20)              
+  </xmp>
+</div> 
+
+<script>
+  // 객체 생성자 함수
+  // 객체 유형
+  function Person(name, age){
+    // this 는 이 함수 생성자를 통해서 생성되는 객체
+    this.name = name;
+    this.age = age;
+    this.gender = true; // gender 속성의 기본값 설정...
+    // 메서드 선언도 가능
+    this.info = function(){
+      return this.name + "/" + this.age;
+    }
+  }
+
+  const father = new Person("홍길동", 45);
+  const mother = new Person("홍길순", 40);
+
+  //객체에 새로운 속성 추가.
+  father.eyeColor = "blue";
+  //       새로운 메서드 추가
+  father.changeName = function(name){
+    this.name = name;
+  }
+
+
+  // 객체생성자에 새로운 속성은 추가할 수 없다.
+  // Person.eyeColor = "black";   -> 틀린 코딩
+
+  //prototype 속성으로 새로운 속성을 객체 생성자에 추가할 수 있다.
+  Person.prototype.eyeColor = "black";
+
+
+
+  // 1) X 객체 생성자에 새로운 메서드를 추가할 수 없다
+  /*
+  Person.changeName = function(name){
+    this.name = name;
+  }
+  */
+  // 2) prototype 속성으로 새로운 메서드를 객체 생성자에 추가할 수 있다.
+  Person.prototype.changeName = function(name){
+    this.name = name;
+  }
+</script>
+</body>
+</html>

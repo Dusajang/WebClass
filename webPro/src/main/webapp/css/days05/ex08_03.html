@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="http://localhost/webPro/images/SiSt.ico"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-size: 2rem; /* 2*16px */
+        font-weight: bold;
+      }
+
+      header,
+      main,
+      aside,
+      footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      header {
+        background-color: black;
+        color: white;
+      }
+
+      /* main {
+      } */
+
+      aside {
+        background-color: #ff9d00;
+      }
+
+      footer {
+        background-color: black;
+        color: white;
+      }
+    </style>
+
+    <style>
+      /* grid layout */
+      /* 그리드 컨테이너 설정 */
+      body {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        /* grid-template-column: auto auto auto auto; */
+        /* grid-template-column: repeat(4, auto); */
+        /* grid-template-areas: 'header header header header'
+      'main main main aside'
+      'footer footer footer footer'; */
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 100px auto 50px;
+        grid-template-areas: "header header" "main aside" "footer footer";
+      }
+      /* 그리그 항목 설정 */
+      header {
+        grid-area: header;
+      }
+
+      main {
+        grid-area: main;
+      }
+
+      aside {
+        grid-area: aside;
+      }
+
+      footer {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <header>header</header>
+    <main>main :)</main>
+    <aside>side</aside>
+    <footer>footer</footer>
+  </body>
+</html>

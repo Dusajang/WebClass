@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+      [js function() 함수]
+      1. 개념 - 반복적으로 사용되는 코드 블록을 함수로 처리
+              - 재사용 목적.
+          drawline()
+      2. js 함수 선언 형식   
+       자바 : [접근지정자][기타제어자] 리턴자료형 함수명([매개변수].....)  {
+          [return]
+        }    
+        
+        js
+        function 함수명([매개변수...]){
+          [return]
+        }
+
+      3. 함수 호출 방법
+        1) 이벤트가 발생으로 자동 함수 호출
+        2) js 함수 호출
+        3) *** 자체 호출 ***
+          (함수 클로저)
+  </xmp>
+
+  <button onclick="test()">button1</button>
+  <button onclick="test(100)">button2</button>
+  <button onclick="test(100, 200, 300)">button3</button>
+  <button onclick="sum(100, 200)">button4</button>
+
+  <p id="demo"></p>
+</div> 
+
+<script>
+
+  test3();
+              // ()=>{}
+  const test3 = function (){  // 표현식을 사용하여 정의된 함수는 호이스팅 되지 않는다.
+    alert("test3...");
+  }
+
+
+  // Function() 생성자를 사용해서 함수를 정의할 수 있다.
+  const test2 = new Function("x", "y", "return x * y");
+
+  // alert(test2(1,2));   2
+
+
+  $("#demo").html(myfunc(10,20));
+
+  //js 호이스팅   /  람다는 호이스팅되지 않는다.
+  function myfunc(a,b){
+    return a+b;
+  }
+
+  function test(){
+    // alert("test...")
+    // js arguments 컬렉션
+    alert(arguments.length)
+  }
+
+  function sum(a,b,c){
+    alert("sum");
+  }
+</script>
+</body>
+</html>
