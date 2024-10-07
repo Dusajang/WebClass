@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+  Array length  : 배열의 크기
+  Array toString()  : 배열의 요소를 콤마(,) 구분자로 문자열 반환
+  Array at()
+  Array join()
+  Array push() : 배열의 새로운 요소를 마지막에 추가하고 배열 크기를 반환
+  Array pop() : 배열의 마지막 요소를 제거하고 반환
+
+  Array shift() : 첫번째 요소를 제거하고 반환...
+                  모두 왼쪽으로 이동...
+  Array unshift() : 첫번째 요소에 삽입을 하고
+                    모든 요소를 오른쪽으로 이동...
+                    배열 크기를 반환하는 메서드
+                    
+  Array delete() : 배열의 요소를 삭제
+  Array concat() : 배열을 병합
+  Array copyWithin() : 배열의 요소를 배열의 다른 위치에 복사 (덮어쓰기,  배열의 크기를 변하지 않음)
+  Array flat() : 평면화 ***
+                 배열의 차월을 줄이는 메서드
+                 다차원 배열을 1차원 배열로 변환하는 메서드
+
+  Array splice() : 요소를 중간에 삽입  splice(0(변경 시작할 요소의 자릿수),0(삭제할 요소 갯수),'x'(삽입할 요소))
+  Array toSpliced() : 원래 배열은 변경하지 않고
+                      새로운 배열을 반환하는 메서드
+  Array slice() : 원본 배열이 변경                 
+  </xmp>
+
+  <p id="demo"></p>
+</div> 
+<script>
+  const months = ["Jan","Feb","Mar","Apr"]
+  //                               0 새 요소를 주가할 위치 인덱스
+  //                                 1 제거할 요소의 수
+  //                               ['Feb', 'Mar', 'Apr']
+  // const spliced = months.toSpliced(0,1);
+months.splice(0,1);
+  // console.log(spliced);
+</script>
+
+<script>
+  /*
+  const b1 = ['a','b','c','d'];
+  //                   x','y'
+  // b1.splice(2, 0, 'x','y');
+// b1.splice(2, 0, 'x','y');
+b1.splice(2, 2, 'x','y');
+console.log(b1.toString());
+*/
+</script>
+<script>
+  // js 2차원 배열 (3행 3열)
+  const a1 = [
+                [1,2,3],
+                [4,5,6],
+                [7,8,9]
+
+              ];
+  const a2 = [];
+
+  // a2 = a1.flat();
+  // console.log(a2.toString);
+
+  /*
+  for (let i = 0; i < a1.length; i++) {
+    for (let j = 0; j < a1[i].length; j++) {
+      a2.push(a1[i][j]);
+    }
+  }
+  */
+
+  /*
+  a1.forEach((element) => {
+    element.forEach((item) => {
+      a2.push(item);
+    });
+  });
+  */
+
+  // a1[0].concat(a1[1], a[2]);
+
+  // alert(Array.isArray(a1[0]));   //true
+  // alert(a1[0][0]);
+
+</script>
+<script>
+  // copyWithin()
+  const arr = [3,5,2,4,1];
+  
+  // console.log(arr.copyWithin(2,0));  //[3, 5, 3, 5, 2]
+  // console.log(arr.copyWithin(2,0,2));  //[3, 5, 3, 5, 1]
+</script>
+<script>
+  
+  const n = [1,2,3];
+  const m = [4,5,6];
+  const s = [7,8,9];
+  
+
+  /*
+  const nm = n.concat(m);
+  const nms = nm.concat(s);
+  */
+
+  const nms = n.concat(m,s);
+  //console.log(nms.toString());
+</script>
+
+<script>
+  const fruits = [
+                  "Banana"
+                  , "Orange"
+                  , "Apple"
+                  , "Mango"
+                ];
+
+  // 요소 수정
+  // fruits[1] = "PineApple";
+  // console.log(fruits.toString());
+
+  /*
+  delete fruits[1];
+  console.log(fruits.toString());
+  alert(fruits[1]);   //undefine
+  */
+
+  // 첫 번째 요소에 PineApple 추가하고
+  // 모든 요소를 한칸씩 뒤로 이동...
+  /*
+  for (let i = fruits.length - 1; i >= 0; i--) {
+  fruits[i+1] = fruits[i];
+  }
+  fruits[0] = "PineApple";
+  */
+//  let 배열크기 = fruits.unshift("PineApple");
+//  alert(fruits.toString());
+
+  //
+  /*
+  console.log(fruits.toString());
+  fruits.shift();
+  console.log(fruits.toString());
+  */
+
+
+        
+  // console.log(fruits[1]);
+  // console.log(fruits.at(1));   //ES2022 추가된 메서드
+
+
+  // 1.
+  /*
+  let content = "<ul>";
+  fruits.forEach((element)=>{
+    content += `<li>${element}</li>`;
+  });
+  content += "</ul>";
+  $("#demo").html(content);
+  */
+
+ // 2. join()  ***
+ /*
+ let content = fruits.join();
+ $("#demo").html(content);
+ */
+/*
+let content = fruits.join(" / ");
+$("#demo").html(content);
+*/
+
+/*
+let content = "<ul><li>"
+content += fruits.join("</li><li>");
+content += "</li></ul>"
+$("#demo").html(content);
+*/
+
+// 배열의 PineApple 요소 추가
+// fruits[4] = "PineApple";
+// fruits[fruits.length] = "PineApple";
+// fruits.push("PineApple");
+
+// alert(fruits.toString());
+
+// 배열의 마지막 요소를 얻어와서 출력.
+// let lastElement = fruits.pop();
+// console.log(lastElement);
+// console.log(fruits.toString());
+
+
+
+
+</script>
+
+<script>
+  const person = [];
+  person[0] = "lee";
+  person[1] = new Date();
+  person[2] = 20;
+
+  // alert(person.length);   //3
+
+  // 1. 배열 객체 확인 방법
+  // alert(Array.isArray(person));   //true
+  // alert(person instanceof Array);   //true
+</script>
+</body>
+</html>

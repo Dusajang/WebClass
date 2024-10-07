@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    js Set
+    js Map
+      ㄴ key-value 한 쌍 (entry)
+      ㄴ 순서 O
+      ㄴ new Map(); 
+          set() 설정
+          get()
+          delete() 요소 제거
+          has() 키 존재 유무 확인
+          forEach() 반복 처리
+          entries()
+          size 속성 등등              
+  </xmp>
+  <script>
+    const m = new Map([
+    ["1번", "홍길동"],
+    ["2번", "이시훈"]
+    ]);
+    m.set("3번", "김준석");
+    m.set("4번", "최사랑");
+
+    // alert(m.size);   //4
+
+    m.set("3번", "김선우");
+
+    if (m.has("3번")) {
+      let entryValue = m.get("3번")
+      // m.set("3번", "김준석");
+      m.delete("3번");  // 엔트리 삭제
+    }
+    // m.clear()
+    // alert(typeof m);  //object
+    // alert(m instanceof Map)   //true
+
+    // 모든 엔트리 출력
+    m.forEach((value, key)=>{
+      document.write(`${key}-${value}<br>`)
+    });
+
+    for (let entry of m.entries()) {
+      document.write(`>>${entry} / ${entry[0]}-${entry[1]}<br>`)
+    }
+
+    // 모든 key값 출력
+    for (let key of m.keys()) {
+      
+    }
+
+    // 모든 value값 출력
+    for (let value of m.values()) {
+      
+    }
+
+  </script>
+</div> 
+</body>
+</html>

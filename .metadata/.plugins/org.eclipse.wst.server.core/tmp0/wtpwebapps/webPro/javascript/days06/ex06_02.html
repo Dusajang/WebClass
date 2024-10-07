@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+  <script>
+    // [문제] 이번 달의 마지막 날짜
+    /*
+    const d = new Date();
+    let year = d.getFullYear();
+    let month = d.getMonth()+1;
+
+    const d2 = new Date(year, month, 0);
+    alert(d2.getDate());   // 31
+    */
+
+    //[문제] 
+  const rrn = "870412-1700001";
+  // 생일이 지났는지 안지났는지, 오늘이 생일인지 체크
+
+  const t = new Date();
+  let tYear = t.getFullYear();
+  t.setHours(0);
+  t.setMinutes(0);
+  t.setSeconds(0);
+  t.setMilliseconds(0);
+
+    // js slice(), subString(), substr()
+    let month = rrn.substr(2,2)
+    let date = rrn.substr(4,2)
+    const b = new Date(tYear, month-1,date);
+    document.write(b.getTime() + "<br>");
+    document.write(t.getTime() + "<br>");
+    document.write((t.getTime() - b.getTime()) + "<br>");
+    document.write((t - b) + "<br>");
+
+
+
+
+
+
+  /*
+  const bYear = parseInt("19" + rrn.substring(0, 2));
+  const bMonth = parseInt(rrn.substring(2, 4));
+  const bDay = parseInt(rrn.substring(4, 6));
+
+  // 현재 날짜 가져오기
+  const today = new Date();
+  const tYear = today.getFullYear();
+  const tMonth = today.getMonth() + 1;
+  const tDay = today.getDate();
+
+
+  if (bMonth > tMonth || (bMonth == tMonth && bDay > tDay)) {
+  document.write("생일이 아직 오지 않았습니다.");
+} else if (bMonth == tMonth && bDay == tDay) {
+  document.write("오늘이 생일입니다.");
+} else {
+  document.write("생일이 지났습니다.");
+}
+*/
+
+  </script>
+</div> 
+</body>
+</html>

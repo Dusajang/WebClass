@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    [for~of문]             
+      ㄴ 반복 가능한 객체(array, set, map, string)들을
+          반복적으로 처리하는 반복문
+      ㄴ 형식
+         for(let/const/var 변수명 of 반복객체){
+         }      
+  </xmp>
+  <script>
+    /*
+    const arr = ["a", "b", "c"];
+    for (let element of arr) {
+      console.log(element);
+    }
+    */
+  </script>
+  <script>
+    /*
+    let msg = "hello world!!!"
+    for (let c of msg) {
+      console.log(c);
+    }
+    */
+  </script>
+  <script>
+    /*
+    let m = new Map([
+      [1, "a"],
+      [2, "b"],
+      [3, "c"]
+    ]);
+    for (let entry of m) {
+      console.log(entry);
+      console.log(entry[0]); == key
+      console.log(entry[1]); == value
+    }
+    */
+  </script>
+  <script>
+    let s = new Set([1,1,2,2,2,3,3]);
+    for (let v of s) {
+      console.log(v);
+    }
+  </script>
+</div> 
+</body>
+</html>

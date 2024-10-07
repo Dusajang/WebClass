@@ -1,0 +1,9 @@
+127.0.0.1 - - [07/Oct/2024:09:11:22 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [07/Oct/2024:09:11:22 +0900] "GET /webPro/javascript/days06/ex01_02.html HTTP/1.1" 200 1101
+0:0:0:0:0:0:0:1 - - [07/Oct/2024:09:11:22 +0900] "GET /webPro/images/SiSt.ico HTTP/1.1" 200 102255
+0:0:0:0:0:0:0:1 - - [07/Oct/2024:09:12:54 +0900] "GET /webPro/images/SiSt.ico HTTP/1.1" 200 102255
+0:0:0:0:0:0:0:1 - - [07/Oct/2024:16:47:20 +0900] "GET /webPro/css/days04/ex04_02.html HTTP/1.1" 200 1037
+0:0:0:0:0:0:0:1 - - [07/Oct/2024:16:47:28 +0900] "GET /webPro/css/days03/ex14_timeline.html HTTP/1.1" 200 4819
+0:0:0:0:0:0:0:1 - - [07/Oct/2024:16:48:07 +0900] "GET /webPro/css/days03/ex09.html HTTP/1.1" 200 1193
+0:0:0:0:0:0:0:1 - - [07/Oct/2024:16:48:07 +0900] "GET /webPro/css/images/arr.gif HTTP/1.1" 200 288
+0:0:0:0:0:0:0:1 - - [07/Oct/2024:16:48:55 +0900] "GET /webPro/html/days03/ex08_06.html HTTP/1.1" 200 1848

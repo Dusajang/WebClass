@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    java 날짜 객체 - Date, Calendar, Localtime, LocalDateTime
+    js 날짜 객체 - Date                     
+  </xmp>
+  <script>
+    /*
+    const d = new Date();
+    
+    document.write(d+"<br>");
+    document.write(d.toString()+"<br>");
+    document.write(d.toDateString()+"<br>");
+    document.write(d.toTimeString()+"<br>");
+    document.write(d.toLocaleString()+"<br>");
+    document.write(d.toLocaleDateString()+"<br>");
+    document.write(d.toLocaleTimeString()+"<br>");
+    */
+
+  /*
+   // 년
+   document.write("년도: " + d.getFullYear()+"<br>");
+   // 월
+   document.write("월: " + (d.getMonth()+1) + "<br>");
+   // 일
+   document.write("일: " + d.getDate()+"<br>");
+   // 시간
+   document.write("시간: " + d.getHours()+"<br>");
+   // 분
+   document.write("분: " + d.getMinutes()+"<br>");
+   // 초
+   document.write("초: " + d.getSeconds()+"<br>");
+   // 요일
+   const weekdays = ["일", "월", "화", "수", "목", "금", "토"];
+   document.write("요일: " + weekdays[d.getDay()] + "요일<br>");
+   // 밀리초
+   document.write("밀리초: " + d.getMilliseconds()+"<br>");
+   */
+</script>
+
+<script>
+  // [문제] 2024-12-23이 무슨 요일인지
+  // const targetDate = new Date("2024-12-23");
+  // const targetDate = new Date(2024, 12-1, 23);
+  // const targetDate = new Date(2024, 12-1);
+  const d = new Date(2024);
+  document.write(d.toLocalString()+"<br>");
+    document.write("일월화수목금토"[d.getDay()] + "요일<br>");
+    // new Date(년,월);
+    // new Date(년,월, 일);
+    // new Date(년,월, 일 ,시간);
+    // new Date(년,월, 일 ,시간, 분);
+    // new Date(년,월, 일 ,시간, 분, 초);
+    // new Date(년,월, 일 ,시간, 분, 초, 밀리초);
+    // new Date(밀리초);
+
+
+    // js 날짜 형식
+    // ISO Date : "2015-03-25" 국제 표준 날짜 양식
+    // Short Date : "03/25/2015"
+  </script>
+</div> 
+</body>
+</html>

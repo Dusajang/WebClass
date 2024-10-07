@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+  [배열 검색 메서드]
+Array indexOf()   : 앞에서 부터 몇 번째인지
+Array lastIndexOf() : 뒤에서 부터 몇 번째인지
+Array includes() : 포함 여부 확인
+
+Array find()
+Array findIndex()
+Array findLast()
+Array findLastIndex()                    
+  </xmp>
+</div> 
+
+<script>
+  const m = [27,28,30,40,42,35,30];
+
+  let index, n;
+  m.find((element)=> element >29);
+  index = m.findIndex((element)=> element >29);
+
+
+  m.findLast((element)=> element >29);
+  index = m.findLastIndex((element)=> element >29);
+  // m 배열에서 29보다 큰 요소의 윗치값과 그에 해당하는 정수를 파악...
+
+
+  // let index = m.indexOf(30);  //2
+  // let index = m.lastIndexOf(30);  //6
+  // let index = m.lastIndexOf(300);  // -1  찾는 값이 없으면...
+  // let index = m.includes(300);   // flase
+  alert(n);
+  alert(index);
+</script>
+</body>
+</html>
