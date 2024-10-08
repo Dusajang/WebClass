@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+      EX6(2015)       Getter, Setter 추가.              
+  </xmp>
+  <script>
+    let person = {
+          firstname:"길동",
+          lasttname:"홍",
+          /*
+          fullname: function (){
+            return this.firstname + "" + this.lasttname;
+          }
+          */
+         //Getter
+         get fullname(){
+          return this.firstname + "" + this.lasttname;
+         },
+         language:"kr",
+         get lang(){
+          return this.language;
+         },
+         //Setter
+         set lang(language){
+          this.language = language;
+         },
+         count:0
+    };
+
+    person.lang = "en";  //setter
+    // alert(person.lang);  //getter
+  </script>
+  <script>
+    // Object.defineProperty() 메서드를 사용해서
+    // 1. 새로운 속성 추가
+    Object.defineProperty(person, "year", {value:"2021"});
+    // 2. 새로운 getter, setter 변경
+    Object.defineProperty(person, "increment",{
+      get:function(){this.counter++;}
+    });
+    Object.defineProperty(person, "decrement",{
+      get:function(){this.counter--;}
+    });
+    Object.defineProperty(person, "add",{
+      set:function(value){this.counter += value;}
+    });
+    // 3. 속성값 변경
+
+
+    person.add = 10;
+  </script>
+</div> 
+</body>
+</html>

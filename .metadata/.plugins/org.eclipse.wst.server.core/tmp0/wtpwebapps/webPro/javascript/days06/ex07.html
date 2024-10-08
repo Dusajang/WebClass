@@ -12,6 +12,46 @@
  span.material-symbols-outlined{
     vertical-align: text-bottom;
  }  
+
+ .container{
+  width: 500px;
+ }
+
+ .collapsible{
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  padding-left: 50px;
+ }
+ .collapsible::after{
+  content: '\002B';    /* + */
+  color: white;
+  float: right;
+  font-weight: bold;
+  margin-left: 5px;
+ }
+
+ .content{
+  padding: 0 18px;
+  background-color: #f1f1f1;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2S ease-out;
+ }
+
+ .collapsible:hover ,  .active{
+    background-color: #555;
+ }
+  
+.active::after{
+    content:'\2212';   /*  -  */
+ }
 </style>
 </head>
 <body>
@@ -26,6 +66,43 @@
   <xmp class="code">
                          
   </xmp>
+
+  <div class="container">
+
+    <button class="collapsible">Section 1</button>
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla iure aliquam soluta minima impedit ratione laboriosam autem omnis. Doloribus eius incidunt totam iure deleniti a officia blanditiis rem recusandae officiis.</div>
+    
+    <button class="collapsible">Section 2</button>
+    <div class="content">
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla iure aliquam soluta minima impedit ratione laboriosam autem omnis. Doloribus eius incidunt totam iure deleniti a officia blanditiis rem recusandae officiis.
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla iure aliquam soluta minima impedit ratione laboriosam autem omnis. Doloribus eius incidunt totam iure deleniti a officia blanditiis rem recusandae officiis.
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla iure aliquam soluta minima impedit ratione laboriosam autem omnis. Doloribus eius incidunt totam iure deleniti a officia blanditiis rem recusandae officiis.
+     </div>
+    
+    <button class="collapsible">Section 3</button> 
+    <div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla iure aliquam soluta minima impedit ratione laboriosam autem omnis. Doloribus eius incidunt totam iure deleniti a officia blanditiis rem recusandae officiis.</div>
+   
+   
+ </div>
+
 </div> 
+
+<script>
+  $(".collapsible").on("click",function (){
+    // jq addClass() removeClass()  toggleClass()
+    $(this).toggleClass("active");
+
+    let maxHeight = $(this).next().css("max-height");   //css로 가져오는 0px
+    // alert(maxHeight);   "0px"
+    if (maxHeight == "0px") {
+      let height = $(this).next().prop("scrollHeight")  // attr or prop  120
+      // alert(height);
+      $(this).next().css("max-height", height + "px")
+    } else {
+      $(this).next().css("max-height", "0px")
+      
+    }
+  })
+</script>
 </body>
 </html>

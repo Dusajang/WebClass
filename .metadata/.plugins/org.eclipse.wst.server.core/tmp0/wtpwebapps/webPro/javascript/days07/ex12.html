@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+     ex12_person.js                    
+     ex12_message.js   
+     
+     js 모듈(module)을 사용하면
+     자바스크립트코드를 별도의 파일로 나눠서 관리
+     코드의 기능별로 유지, 보수 용이.
+
+     import(수입) : 외부 파일로부터 모듈을 가져온다.
+     export(수출) : 
+
+     함수 또는 변수를 포함하는 모듈을 생성 -> 외부 자바스크립트 파일로 저장
+
+     내보내기
+     1) 명명된 이름(named) 내보내기(exports).
+     2) 기본(default) 내보내기(exports).
+  </xmp>
+  <p id="demo"></p>
+
+  <!-- 명령문을 사용하여 외부 파일 가져오기 -->
+   <script type="module">
+    import {name, age} from "./ex12_person.js";
+
+    $("#demo").html(`${name} - ${age}`);
+
+
+    </script>
+    <script type="module">
+      import message from "./ex12_message.js";
+  
+      $("#demo").html(message());
+
+    </script>
+</div> 
+</body>
+</html>

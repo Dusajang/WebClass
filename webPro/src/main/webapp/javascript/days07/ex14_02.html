@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+  <script>
+    const person = {
+            firstname:"길동",
+            lasttname:"홍",
+            age:20,
+            //메서드
+            print:function (){
+              return this.firstname + "/" + this.age
+            },
+            // 중첩된 객체 배열
+            cars:[
+              {name:"k9", year:2021},
+              {name:"k5", year:2022}
+            ]
+    };
+    // 기존 객체에 새로운 속성을 추가
+    person.eyeColor = "blue";
+    // 기존 객체에 새로운 메서드도 추가
+    person.name = function (){
+      return (this.firstname + " " + this.lasttname).toUpperCase();
+    }
+
+    // 기존 객체에 속성을 제거
+    delete person.age;
+    // alert(person.age);  //undefined
+
+    // 두번째 차 정보를 조회
+    person.cars[1].name;
+    person.cars[1].year;
+
+    // 메서드 호출
+    person.print();
+
+    //js 객체를 배열로 변환하는 함수 : Object.values()
+    const personArr = Object.values(person);
+  </script>
+  <script>
+    // json -> js Object 변환 : JSON.parse()
+    // js Object -> JSON 변환 : JSON.stringify()
+    let personJSON = JSON.stringify(person);
+    /*
+    alert(personJSON);  
+    {
+      "firstname":"길동",
+      "lasttname":"홍",
+      "cars":[
+        {"name":"k9","year":2021},
+        {"name":"k5","year":2022}
+            ],
+      "eyeColor":"blue"}
+    */
+  </script>
+</div> 
+</body>
+</html>

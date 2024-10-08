@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    ES6(2015)  화살표함수
+      ㄴ 더 짧은 구문으로 함수 작성할 수 있다.                     
+  </xmp>
+
+  <script>
+    /*
+    let hello = function (){
+      return "hello world"
+    };
+    */
+    // alert(hello);   // 함수 자체를 나타냄
+    // alert(typeof hello);   // function
+    // alert(hello());   // "hello world"
+
+    // 화살표 연산자(함수)
+    /*
+    let hello = ()=>{
+       return "hello world"
+    }
+    */
+
+    // 명령어가 한 줄인 경우 {} 중괄호 생략 가능
+    // return 문일 경우, return 키워드 생략 가능
+    // let hello = ()=> "hello world";
+
+    // let hello = (msg)=>"hello" + msg;
+    // alert(hello("hi"));  //hellohi
+    /*
+    let hello = function(name, age){
+      return `${name} : ${age}`;
+    }
+    */
+
+    // let hello = ()=>`${name} : ${age}`;
+
+    // 만약에 매개변수가 1개일 경우에는 ()소괄호 생략 가능
+    // let hello = (msg)=>"hello" + msg;
+
+    //       화살표함수 안에서의 this == object Window
+    let hello = ()=>{
+      console.log(this);
+    }
+  </script>
+</div> 
+</body>
+</html>

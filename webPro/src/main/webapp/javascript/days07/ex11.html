@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+     [js ES6 클래스 도입]  
+     - class 키워드
+     - constructor 생성자 함수 추가
+
+     형식
+     class 클래스명{
+
+      // 항상 생성자 함수 추가
+      constructor(){
+
+      }
+
+     }
+  </xmp>
+  <script>
+    class Car{
+      // java 필드 선언
+      // public String name;
+      // public int year;
+
+      constructor(name, year){
+        this.name = name;
+        this.year = year;
+      }
+
+      // 메서드 선언
+      age(){
+        const now = new Date();
+        return now.getFullYear() - this.year;
+      }
+
+      method1(){}
+      method2(){}
+
+    }
+
+    // 객체 생성 사용
+    // Car myCar = new Car();
+
+    const myCar = new Car("BMW", 2022);
+    myCar.get();
+    myCar.name;
+    myCar.year;
+  </script>
+</div> 
+</body>
+</html>

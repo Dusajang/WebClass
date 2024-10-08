@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+                         
+  </xmp>
+
+  <table id="tblDept">
+    <thead>
+       <tr>
+          <th><input type="checkbox" class="all"> 모두 선택</th>
+          <th>Name</th>
+          <th>Loc</th>
+       </tr>
+    </thead>
+    <tbody>
+       <tr>
+          <td><input type="checkbox" id="ck1"></td>
+          <td>Quam.</td>
+          <td>Sapiente.</td>
+       </tr>
+       <tr>
+        <!-- data-이름="값"  getAttribute("data-이름") -->
+          <td><input type="checkbox" id="ck2" data-name='Consequatur!'></td>
+          <td>Consequatur!</td>
+          <td>Nisi.</td>
+       </tr>
+       <tr>
+          <td><input type="checkbox" id="ck3"></td>
+          <td>Tenetur!</td>
+          <td>Modi.</td>
+       </tr>
+       <tr>
+          <td><input type="checkbox" id="ck4"></td>
+          <td>Earum.</td>
+          <td>Officiis.</td>
+       </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+         <td colspan="3" align="center">
+           <button>선택 확인</button>
+         </td>
+        </tr>
+    </tfoot>
+ </table>
+ 
+ <p id="demo"></p>
+
+</div> 
+
+<script>
+  $(":checkbox.all").on("click", function (){
+    $(":checkbox:not(.all)").prop("checked", $(this).prop("checked"))
+  });
+
+  $(":checkbox:not(.all)").on("click", function (){
+    let count = $(":checkbox:not(.all)").length;
+    let checkedCount = $(":checkbox:not(.all):checked").length
+
+    $(":checkbox.all").prop("checked", count == checkedCount ? true : false);
+  });
+
+  $("tfoot button").on("click", function (){
+
+    const ul = $("<ul></ul>");
+
+    $(":checkbox:not(.all):checked").each(function(index, element){
+      // let name = ckb.parentElement.nextElementSibling.innerText;
+      let name = $(element).parent().next().text();
+      ul.append(`<li>${name}</li>`)
+    });
+    $("#demo").empty().append(ul);
+  });
+</script>
+
+
+
+<script>
+  /*
+document.querySelector(".all").onchange = function() {
+    var checkboxes = document.querySelectorAll("#tblDept input[type=checkbox]");
+    for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = this.checked;
+    }
+}
+*/
+
+/*
+for (let i = 0; i < ckbs.length; i++) {
+  ckbs[i].onchange = function() {
+    let allChecked = true;
+
+    for (let j = 0; j < ckbs.length; j++) {
+      if (!ckbs[j].checked) {
+        allChecked = false;
+        break;
+      }
+    }
+    allCkb.checked = allChecked;
+  }
+}
+*/
+
+/*
+document.querySelector("button").onclick = function (){
+  let demo = document.querySelector("#demo");
+  demo.innerHTML = "";
+
+  for (let i = 0; i < ckbs.length; i++) {
+    if (ckbs[i].checked) {
+      let closesttr = ckbs[i].closest("tr");
+      let name = closesttr.querySelector("td:nth-of-type(2)").textContent;
+      let loc = closesttr.querySelector("td:nth-of-type(3)").textContent;
+      demo.innerHTML += `<li>${name}, ${loc}</li>`;
+    }
+  }//for
+
+}
+*/
+</script>
+</body>
+</html>

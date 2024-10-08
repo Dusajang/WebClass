@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+    https://www.json.org/json-en.html     
+    [JSON]
+    1) JSON (JavaScript Object Notation)
+              자바스크립트 객체 표기법
+    2) 서버 = 경량의 DATA-교환 형식 = 클라이언트
+      ex13.xml : DATA-교환 형식
+      <?xml version="1.0" encoding="UTF-8"?> ==> xml 선언문     
+    3) 이 형식은 사람이 읽고 쓰기에 용이하며, 기계가 분석하고 생성함에도 용이   
+    4) JSON은 완벽하게 언어로 부터 독립적이다.    
+    5) JSON은 2개의 기본 구조.
+        ㄱ. name/value 한 쌍 ==> 컬렉션
+    6) JSON 형식
+        {   <!-- _ : 공백  -->
+          _ "이름" _ :값          
+          _ "이름" _ :{},      
+          _ "이름" _ :[ 20, {}, [], "true"],          
+          _ "이름" _ :"홍\"길\b동",          
+          _ "이름" _ :-19.23e+3         
+          _ "이름" _ :"true"          
+          _ "이름" _ :"null"          
+       }
+
+       예) 가족사항
+       {
+        "할아버지": { 이름:"홍길동", 나이:70, 직업:"무직" },
+        "할머니": { 이름:"홍길순", 나이:66, 직업:"전업주부" },
+        "아버지": "홍버지"
+       }
+  </xmp>
+
+  <script>
+    // js 객체
+    /*
+    let person ={
+          name:"홍길동",
+          age:20
+    };
+    // alert(typeof person);  //object
+    */
+   
+   // js 문자열 == JSON
+  //  let person = '{ "name":"홍길동", "age":20 }';
+  //  alert(typeof person);  //string
+
+  // 서버<-JSON 교환-> 클라이언트
+  let person = "{ \"name\":\"홍길동\", \"age\":20 }";
+  // alert(person.name)  //undefined
+
+  // JSON -> js Object 변환 : JSON.parse(JSON문자열)
+  const pObj = JSON.parse(person);
+  // alert(pObj.name);  //홍길동
+
+  //js Object -> JSON 변환 (JSP, Ajax 처리) json 라이브러리 추가...
+
+  </script>
+  <script>
+  let emps = `{  
+            "employees": [ 
+              {"name":"홍길동1","age":20 },
+              {"name":"홍길동2","age":21 },
+              {"name":"홍길동3","age":22 },
+              {"name":"홍길동4","age":23 }
+                ]
+        }`;
+
+  const eObj = JSON.parse(emps);
+  // alert(typeof eObj); //object
+  // alert(Array.isArray(eObj.employees));  //true
+  console.log(eObj.employees[2]);
+
+  const emp3 = eObj.employees[2];
+  // alert(emp3.name + "/" + emp3["age"]);
+
+
+  </script>
+</div> 
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+     js자료형
+     1) number
+     2) string      
+     3) boolean
+     4) bigint
+     5) null
+     6) undefined
+     7) symbol    
+     9) object - array, set, map, function          
+  </xmp>
+  <!-- 처리 후 undefined 반환 -->
+  <a href="javascript:void(0)">링크1</a>
+  <br>
+  <a href="javascript:void(document.body.style.backgroundColor='red')">링크1</a>
+  <script>
+    // void 연산자
+
+    /*
+      [형변환]
+      1) 문자열 -> 숫자 형변환
+        Number("100")
+        parseInt()
+        parseFloat()
+        + 단항영산자
+    */
+   let x = "100";
+  //  alert(typeof x);  // string
+  let y = + x;
+  // alert(typeof y);  //number
+
+  /*
+    2) 숫자 -> 문자열 형변환
+      100 + ""
+      String(100)  전역 메서드
+      (100).toString()
+    
+    3) 날짜 -> 숫자 변환
+      d=new Date();
+      d.getTime();
+      Number(d);
+
+    4) 날짜 -> 문자열 변환
+      String(Date())
+      Date().tostring()
+
+    5) 불린형 -> 숫자
+      Number(true) -> 1
+      Number(false) -> 0
+
+    6) 불린형 -> 문자열
+      String(true) -> "true"
+      true.toString()
+
+      참고)
+      5 + null => 5
+      "5" + null => "5null"
+  */
+  </script>
+</div> 
+</body>
+</html>

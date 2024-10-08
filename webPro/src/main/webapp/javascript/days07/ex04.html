@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/webPro/images/SiSt.ico">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://localhost/webPro/resources/cdn-main/example.css">
+<script src="http://localhost/webPro/resources/cdn-main/example.js"></script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }  
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">dkrkdfla HOme</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+     [js 제어문]           
+     1. if    if else     if else if else if else
+     2. switch break
+     3. for / forof / forin
+     4. while / do~while
+     5. break, continue
+     
+        break 레이블명;
+        continue 레이블명
+
+        OUT:
+        for(){
+          for(){
+            break;
+          }
+          for(){
+            break OUT;
+          }
+        }
+
+      forof / forin 차이점 
+      1. for~of
+          ㄴ 반복객체(문자열, 배열, 객체, map 등등)
+              반복처리...
+      2. for~in
+          ㄴ 객체의 속성을 반복하는 문
+    
+  </xmp>
+</div> 
+<script>
+  // 배열도 객체이다
+  var m = [3,5,2,4,1];
+  // alert(typeof m);   //object
+
+  for (const x in m) {
+    // console.log(index + "/" + m[index]);
+  }
+</script>
+<script>
+  var person = {
+    name:"admin",
+    age:20,
+    gender:true
+  };
+
+  for (const prop in person) {
+    // console.log(prop + "/" + person[prop]);
+  }
+</script>
+<script>
+  let msg = "홍길동입니다."
+  // for~in
+  for (const index in msg) {
+    console.log(index + "/" + msg[index]);
+  }
+
+  //for of
+  for (let c of msg) {
+    // console.log(c)
+  }
+
+  const s = new Set(m);
+  for (let n of s) {
+    // console.log(n);
+  }
+
+  const fruits = new Map([
+    ["apples", 500],
+    ["bananas", 300],
+    ["oranges", 200]
+  ]);
+
+  for (let f of fruits) {
+    console.log(f + "/" + f[0] + "/" + f[1]);
+  }
+</script>
+</body>
+</html>
